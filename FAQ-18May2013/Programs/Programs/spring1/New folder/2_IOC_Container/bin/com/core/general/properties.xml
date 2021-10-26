@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+
+default-init-method="init" default-destroy-method="destroy">
+
+<bean id="user" class="com.core.general.User">
+	<constructor-arg value="frank" />
+	<constructor-arg value="smith" />
+
+</bean>
+
+<bean id="beanBox" class="com.core.general.BoxBean" 
+>
+<property name="length" value="10"/>
+<property name="breadth" value="20"/>
+<property name="height" value="30"/>
+<property name="user" ref="user"/>
+</bean>
+	
+	
+	
+<bean id="beanLock" class="com.core.general.BoxLock" 
+>
+<property name="length" value="10"/>
+<property name="breadth" value="20"/>
+<property name="height" value="30"/>
+<property name="lock" >
+	<bean class="com.core.general.Lock">
+	<constructor-arg value="Automatic"></constructor-arg>
+	
+	</bean>
+</property>
+</bean>
+
+<bean id="audi" class="com.core.general.Car">
+	<property name="make" value="Audi">
+	</property>
+	<property name="model" value="A7">
+	</property>
+
+</bean>
+
+<bean id="bmw" class="com.core.general.Car">
+	<property name="make" value="BMW">
+	</property>
+	<property name="model" value="5Series">
+	</property>
+
+</bean>
+
+<bean id="owner" class="com.core.general.Owner">
+	<property name="firstName" value="Frank">
+	</property>
+	<property name="lastName" value="Smith">
+	</property>
+	<property name="cars">
+	<list>
+		<ref bean="audi"/>
+		<ref bean="audi"/>
+		<ref bean="bmw" />
+	</list>
+	</property>
+
+</bean>
+
+<bean id="owner1" class="com.core.general.Owner">
+	<property name="firstName" value="Frank">
+	</property>
+	<property name="lastName" value="Smith">
+	</property>
+	<property name="cars">
+	<set>
+		<ref bean="audi"/>
+		<ref bean="audi"/>
+		<ref bean="bmw" />
+	</set>
+	</property>
+
+</bean>
+
+<bean id="owner2" class="com.core.general.OwnerMap">
+	<property name="firstName" value="Frank">
+	</property>
+	<property name="lastName" value="Smith">
+	</property>
+	<property name="cars">
+	<map>
+		<entry key="#{audi.make}" value-ref="audi"/>
+		<entry key="#{bmw.make}" value-ref="bmw"/>
+	
+		
+		
+	</map>
+	</property>
+
+</bean>
+
+<bean id="owner3" class="com.core.general.OwnerProp">
+	<property name="firstName" value="Frank">
+	</property>
+	<property name="lastName" value="Smith">
+	</property>
+	<property name="cars">
+		<props>
+			<prop key="#{audi.make}">#{audi.model}</prop>
+			<prop key="#{bmw.make}">#{audi.model}</prop>
+		
+		</props>
+		
+		
+
+	</property>
+
+</bean>
+
+
+
+
+
+</beans>

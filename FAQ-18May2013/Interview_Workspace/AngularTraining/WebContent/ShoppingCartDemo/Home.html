@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="app/css/main.css" rel="stylesheet" />
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<script src="app/modules/order/orderModule.js"></script>
+	<script src="app/modules/order/js/orderController.js"></script>
+	<script src="app/modules/accounts/accountsModule.js"></script>
+	<script src="app/modules/accounts/js/accountsController.js"></script>
+	<script src="app/modules/products/productsModule.js"></script>
+	<script src="app/modules/products/js/productsController.js"></script>
+	<script src="app/js/mainModule.js"></script>
+	<script>
+
+	</script>
+</head>
+<body>
+	<header>
+		<h1>SysTeleca Online Portal</h1>
+	</header>
+	<main>
+		<div ng-view></div>
+	</main>
+	<footer>
+		<center>SysTeleca banglaore <br> @2015</center>
+	</footer>
+</body>
+</html>

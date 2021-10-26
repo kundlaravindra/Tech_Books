@@ -1,0 +1,168 @@
+package com.toshiba.concurrent;
+
+
+import java.util.Collections;
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+import java.util.Hashtable;
+ 
+import java.util.concurrent.ConcurrentHashMap;
+
+import java.util.concurrent.ExecutorService;
+
+import java.util.concurrent.Executors;
+
+ 
+
+/**
+14.
+* HashMapInfiniteLoopSimulator
+15.
+* @author Pierre-Hugues Charbonneau
+16.
+*
+17.
+*/
+
+public class HashMapInfiniteLoopSimulator {
+
+ 
+20.
+private static final int NB_THREADS = 3;
+21.
+private static final int NB_TEST_ITERATIONS = 50;
+22.
+ 
+23.
+private static Map<String, Integer> assignedMapForTest = null;
+24.
+private static Map<String, Integer> nonThreadSafeMap = null;
+25.
+private static Map<String, Integer> threadSafeMap1 = null;
+26.
+private static Map<String, Integer> threadSafeMap2 = null;
+27.
+private static Map<String, Integer> threadSafeMap3 = null;
+28.
+ 
+29.
+/**
+30.
+* Main program
+31.
+* @param args
+32.
+*/
+33.
+public static void main(String[] args) {
+34.
+ 
+35.
+System.out.println("Infinite Looping HashMap Simulator");
+36.
+System.out.println("Author: Pierre-Hugues Charbonneau");
+37.
+System.out.println("http://javaeesupportpatterns.blogspot.com");
+38.
+ 
+39.
+for (int i=0; i<NB_TEST_ITERATIONS; i++) {
+40.
+ 
+41.
+// Plain old HashMap (since JDK 1.2)
+42.
+nonThreadSafeMap = new HashMap<String, Integer>(2);
+43.
+ 
+44.
+// Plain old Hashtable (since JDK 1.0)
+45.
+threadSafeMap1 = new Hashtable<String, Integer>(2);
+46.
+ 
+47.
+// Fully synchronized HashMap
+48.
+threadSafeMap2 = new HashMap<String, Integer>(2);
+49.
+threadSafeMap2 = Collections.synchronizedMap(threadSafeMap2);
+50.
+ 
+51.
+// ConcurrentHashMap (since JDK 1.5)
+52.
+threadSafeMap3 = new ConcurrentHashMap<String, Integer>(2); // ConcurrentHashMap
+53.
+ 
+54.
+ 
+55.
+/*** Assign map at your convenience ****/
+56.
+assignedMapForTest = threadSafeMap3;
+57.
+ 
+58.
+ 
+59.
+long timeBefore = System.currentTimeMillis();
+60.
+long timeAfter = 0;
+61.
+Float totalProcessingTime = null;
+62.
+ 
+63.
+ExecutorService executor = Executors.newFixedThreadPool(NB_THREADS);
+64.
+ 
+65.
+for (int j = 0; j < NB_THREADS; j++) {
+66.
+ 
+67.
+/** Assign the Map at your convenience **/
+68.
+Runnable worker = new WorkerThread(assignedMapForTest);
+69.
+executor.execute(worker);             
+70.
+}
+71.
+ 
+72.
+// This will make the executor accept no new threads
+73.
+// and finish all existing threads in the queue
+74.
+executor.shutdown();
+75.
+// Wait until all threads are finish
+76.
+while (!executor.isTerminated()) {
+77.
+ 
+78.
+}
+79.
+ 
+80.
+timeAfter = System.currentTimeMillis();
+81.
+totalProcessingTime = new Float( (float) (timeAfter - timeBefore) / (float) 1000);
+82.
+ 
+83.
+System.out.println("All threads completed in "+totalProcessingTime+" seconds");
+84.
+}
+85.
+}
+86.
+ 
+87.
+}

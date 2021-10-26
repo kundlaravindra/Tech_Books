@@ -1,0 +1,23 @@
+﻿<fieldset>
+    <legend>
+        Login Section
+    </legend>
+    <table ng-controller="loginController">
+
+        <tr>
+            <td>UserName</td>
+            <td> <input type="text" required ng-model="Credentials.UserName" /> </td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td> <input type="password" required ng-model="Credentials.Password"/> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="Login" ng-click="Validate()" /> </td>
+            <td> <input type="reset" value="Clear"/> </td>
+        </tr>
+
+
+    </table>
+</fieldset>

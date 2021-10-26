@@ -1,0 +1,7 @@
+package sample;
+
+import java.util.Comparator;
+
+public class CollectionExp implements Comparator{
+
+}

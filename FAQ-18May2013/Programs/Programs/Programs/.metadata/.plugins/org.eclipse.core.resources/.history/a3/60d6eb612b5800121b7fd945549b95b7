@@ -1,0 +1,21 @@
+package paper1;
+
+import java.util.Vector;
+
+public class VectorEx {
+	public void test(){
+		Vector v=new Vector();
+		v.addElement("1");
+		v.addElement("2");
+		change(v);
+		
+	}
+	public void change(Vector v){
+		v.addElement("3");
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

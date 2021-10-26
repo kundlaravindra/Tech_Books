@@ -1,0 +1,36 @@
+package sample;
+
+public class ThreadExample extends Thread {
+	
+	Thread t1,t2,t3;
+	public void readFile(){
+		System.out.println("i am in read file");
+	}
+public void secondFile(){
+	System.out.println("i am in second file");
+}
+public void run(){
+	if (t1.getPriority()==9) {
+		t1.readFile();
+		
+	}
+	else if(t2.getPriority()==8){
+		t2.secondFile();
+		
+	}
+	else if(t3.getPriority()==6){
+		t3.compareFile();
+	}
+	else{
+		System.out.println("No thread executed..");
+	}
+}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#LayoutPanels -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link href="./GWT Project_files/main.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" async="" src="./GWT Project_files/ga.js"></script><script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40673139-1']);
+      _gaq.push(['_setDomainName', 'gwtproject.org']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script type="text/javascript" src="./GWT Project_files/gwtproject.nocache.js"></script><script src="./GWT Project_files/97390A731B3B02D01800264D4A694947.cache.js"></script>
+    <title>GWT Project</title>
+	</head>
+	<body>
+	
+<div id="gwt-header1">
+  <div class="gwt-wrap">
+    <div class="first"></div>
+  </div>
+</div>
+
+<div id="gwt-header2">
+  <div class="gwt-wrap">
+    <a href="http://www.gwtproject.org/"><div class="first"><h1>GWT</h1></div></a>
+    <div class="second">
+    	<ul class="nav">
+    		<li><a href="http://www.gwtproject.org/">Home</a></li>
+    		<li><a href="http://www.gwtproject.org/download.html">Download</a></li>
+    		<li><a href="http://www.gwtproject.org/doc/latest/DevGuide.html">Docs</a></li>
+    		
+    	</ul>
+    	<div style="float:right; font-size: 50%; margin-top: 8px; color: red">This is a <b>beta version</b>. If you find errors, please <a href="https://code.google.com/p/google-web-toolkit/issues/entry">report them</a> or <a href="http://www.gwtproject.org/makinggwtbetter.html#webpage">change them</a>!</div>
+    	<a href="http://gwtcreate.com/" title="Go to gwtcreate.com" class="gwtcreate"><img src="./GWT Project_files/gwtcreate-banner.2x.png" width="474" height="89" alt="GWT.create Conference – The #1 GWT conference in 2013, with over 60 presentations. Dec 12–13th in San Francisco &amp; Dec 17–18th in Frankfurt am Main"></a>
+    </div>
+  </div>
+</div>
+
+<div id="gwt-header3">
+  <div class="gwt-wrap">
+    <div class="first"><h2>TABLE OF CONTENTS</h2></div>
+    
+  </div>
+</div>
+
+<div class="gwt-wrap">
+  <div id="gwt-toc">
+    <ul><li class="file"><a href="http://www.gwtproject.org/index.html" ahref="/index.html" title="Home">Home</a></li><li class="folder"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#">Articles</a><ul style="display: none;"><li class="file"><a href="http://www.gwtproject.org/articles/articles.html" ahref="/articles/articles.html" title="A summary of all articles">Overview</a></li><li class="file"><a href="http://www.gwtproject.org/articles/dom_events_memory_leaks_and_you.html" ahref="/articles/dom_events_memory_leaks_and_you.html" title="How GWT tackles memory leaks">DOM Memory Leaks</a></li><li class="file"><a href="http://www.gwtproject.org/articles/dynamic_host_page.html" ahref="/articles/dynamic_host_page.html" title="Running GWT in dynamic host pages">Dynamic Host Page</a></li><li class="file"><a href="http://www.gwtproject.org/articles/elemental.html" ahref="/articles/elemental.html" title="Elemental">Elemental</a></li><li class="file"><a href="http://www.gwtproject.org/articles/fragment_merging.html" ahref="/articles/fragment_merging.html" title="Fragment Merging">Fragment Merging</a></li><li class="file"><a href="http://www.gwtproject.org/articles/gwt-iphone.html" ahref="/articles/gwt-iphone.html" title="GWT iPhone">GWT iPhone</a></li><li class="file"><a href="http://www.gwtproject.org/articles/mvp-architecture.html" ahref="/articles/mvp-architecture.html" title="MVP Part1">MVP Part1</a></li><li class="file"><a href="http://www.gwtproject.org/articles/mvp-architecture-2.html" ahref="/articles/mvp-architecture-2.html" title="MVP Part2">MVP Part2</a></li><li class="file"><a href="http://www.gwtproject.org/articles/security_for_gwt_applications.html" ahref="/articles/security_for_gwt_applications.html" title="Security for GWT applications">Security</a></li><li class="file"><a href="http://www.gwtproject.org/articles/superdevmode.html" ahref="/articles/superdevmode.html" title="Super Dev Mode">Super Dev Mode</a></li><li class="file"><a href="http://www.gwtproject.org/articles/testing_methodologies_using_gwt.html" ahref="/articles/testing_methodologies_using_gwt.html" title="Best practices on Testing GWT applications">Testing</a></li><li class="file"><a href="http://www.gwtproject.org/articles/using_gwt_for_json_mashups.html" ahref="/articles/using_gwt_for_json_mashups.html" title="Using GWT for JSON Mashups">JSON &amp; Mashups</a></li><li class="file"><a href="http://www.gwtproject.org/articles/using_gwt_with_hibernate.html" ahref="/articles/using_gwt_with_hibernate.html" title="GWT &amp; Hibernate">GWT &amp; Hibernate</a></li></ul></li><li class="folder open"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#">Documentation</a><ul style=""><li class="folder open"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#">Latest</a><ul style=""><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuide.html" ahref="/doc/latest/DevGuide.html" title="Overview of the GWT docs">Overview</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideA11y.html" ahref="/doc/latest/DevGuideA11y.html" title="Accessibility">Accessibility</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideClientBundle.html" ahref="/doc/latest/DevGuideClientBundle.html" title="ClientBundle">ClientBundle</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodeSplitting.html" ahref="/doc/latest/DevGuideCodeSplitting.html" title="Code Splitting">Code Splitting</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasics.html" ahref="/doc/latest/DevGuideCodingBasics.html" title="Coding Basics">Coding Basics</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsClient.html" ahref="/doc/latest/DevGuideCodingBasicsClient.html" title="Coding Basics Client">Coding Basics Client</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsCompatibility.html" ahref="/doc/latest/DevGuideCodingBasicsCompatibility.html" title="Coding Basics Compatibility">Coding Basics Compatibility</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsDeferred.html" ahref="/doc/latest/DevGuideCodingBasicsDeferred.html" title="Coding Basics Deferred">Coding Basics Deferred</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsDelayed.html" ahref="/doc/latest/DevGuideCodingBasicsDelayed.html" title="Coding Basics Delayed">Coding Basics Delayed</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsFormatting.html" ahref="/doc/latest/DevGuideCodingBasicsFormatting.html" title="Coding Basics Formatting">Coding Basics Formatting</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsHistory.html" ahref="/doc/latest/DevGuideCodingBasicsHistory.html" title="Coding Basics History">Coding Basics History</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSNI.html" ahref="/doc/latest/DevGuideCodingBasicsJSNI.html" title="Coding Basics JSNI">Coding Basics JSNI</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSON.html" ahref="/doc/latest/DevGuideCodingBasicsJSON.html" title="Coding Basics JSON">Coding Basics JSON</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsOverlay.html" ahref="/doc/latest/DevGuideCodingBasicsOverlay.html" title="Coding Basics Overlay">Coding Basics Overlay</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsXML.html" ahref="/doc/latest/DevGuideCodingBasicsXML.html" title="Coding Basics XML">Coding Basics XML</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCompileReport.html" ahref="/doc/latest/DevGuideCompileReport.html" title="Compile Report">Compile Report</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html" ahref="/doc/latest/DevGuideCompilingAndDebugging.html" title="Compiling And Debugging">Compiling And Debugging</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideDeploying.html" ahref="/doc/latest/DevGuideDeploying.html" title="Deploying">Deploying</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideGlossary.html" ahref="/doc/latest/DevGuideGlossary.html" title="Glossary">Glossary</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideHtml5.html" ahref="/doc/latest/DevGuideHtml5.html" title="Html5">Html5</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideHtml5Storage.html" ahref="/doc/latest/DevGuideHtml5Storage.html" title="Html5 Storage">Html5 Storage</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideI18n.html" ahref="/doc/latest/DevGuideI18n.html" title="Internationalization">I18n</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideI18nConstants.html" ahref="/doc/latest/DevGuideI18nConstants.html" title="I18n Constants">I18n Constants</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideI18nLocale.html" ahref="/doc/latest/DevGuideI18nLocale.html" title="I18n Locale">I18n Locale</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideI18nMessages.html" ahref="/doc/latest/DevGuideI18nMessages.html" title="I18n Messages">I18n Messages</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideI18nPluralForms.html" ahref="/doc/latest/DevGuideI18nPluralForms.html" title="I18n Plural Forms">I18n Plural Forms</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideIE9.html" ahref="/doc/latest/DevGuideIE9.html" title="Internet Explorer 9">Internet Explorer 9</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideLightweightMetrics.html" ahref="/doc/latest/DevGuideLightweightMetrics.html" title="Lightweight Metrics">Lightweight Metrics</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideLogging.html" ahref="/doc/latest/DevGuideLogging.html" title="Logging">Logging</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideMvpActivitiesAndPlaces.html" ahref="/doc/latest/DevGuideMvpActivitiesAndPlaces.html" title="MVP Activities And Places">MVP Activities And Places</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideOptimizing.html" ahref="/doc/latest/DevGuideOptimizing.html" title="Optimizing">Optimizing</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideOrganizingProjects.html" ahref="/doc/latest/DevGuideOrganizingProjects.html" title="Organizing Projects">Organizing Projects</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideRequestFactory.html" ahref="/doc/latest/DevGuideRequestFactory.html" title="Request Factory">Request Factory</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideSecurity.html" ahref="/doc/latest/DevGuideSecurity.html" title="Security">Security</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideSecurityRpcXsrf.html" ahref="/doc/latest/DevGuideSecurityRpcXsrf.html" title="Security Rpc Xsrf">Security Rpc Xsrf</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideSecuritySafeHtml.html" ahref="/doc/latest/DevGuideSecuritySafeHtml.html" title="Security SafeHtml">Security SafeHtml</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideServerCommunication.html" ahref="/doc/latest/DevGuideServerCommunication.html" title="Server Communication">Server Communication</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideTesting.html" ahref="/doc/latest/DevGuideTesting.html" title="Testing">Testing</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideTestingCoverage.html" ahref="/doc/latest/DevGuideTestingCoverage.html" title="Testing Coverage">Testing Coverage</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideTestingHtmlUnit.html" ahref="/doc/latest/DevGuideTestingHtmlUnit.html" title="Testing Html Unit">Testing Html Unit</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideTestingRemoteTesting.html" ahref="/doc/latest/DevGuideTestingRemoteTesting.html" title="Testing Remote Testing">Testing Remote Testing</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUi.html" ahref="/doc/latest/DevGuideUi.html" title="UI">UI</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html" ahref="/doc/latest/DevGuideUiBinder.html" title="UI Binder">UI Binder</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiBinderI18n.html" ahref="/doc/latest/DevGuideUiBinderI18n.html" title="UI Binder I18n">UI Binder I18n</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiBrowser.html" ahref="/doc/latest/DevGuideUiBrowser.html" title="UI Browser">UI Browser</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiCellTable.html" ahref="/doc/latest/DevGuideUiCellTable.html" title="UI CellTable">UI CellTable</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiCellWidgets.html" ahref="/doc/latest/DevGuideUiCellWidgets.html" title="UI Cell Widgets">UI Cell Widgets</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiCss.html" ahref="/doc/latest/DevGuideUiCss.html" title="UI Css">UI Css</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiCustomCells.html" ahref="/doc/latest/DevGuideUiCustomCells.html" title="UI Custom Cells">UI Custom Cells</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiCustomWidgets.html" ahref="/doc/latest/DevGuideUiCustomWidgets.html" title="UI Custom Widgets">UI Custom Widgets</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiDom.html" ahref="/doc/latest/DevGuideUiDom.html" title="UI DOM">UI DOM</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiEditors.html" ahref="/doc/latest/DevGuideUiEditors.html" title="UI Editors">UI Editors</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiHandlers.html" ahref="/doc/latest/DevGuideUiHandlers.html" title="UI Handlers">UI Handlers</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiImageBundles.html" ahref="/doc/latest/DevGuideUiImageBundles.html" title="UI Image Bundles">UI Image Bundles</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html" ahref="/doc/latest/DevGuideUiPanels.html" title="UI Panels" class="selected">UI Panels</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiWidgets.html" ahref="/doc/latest/DevGuideUiWidgets.html" title="UI Widgets">UI Widgets</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/DevGuideValidation.html" ahref="/doc/latest/DevGuideValidation.html" title="Validation">Validation</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_Client.html" ahref="/doc/latest/FAQ_Client.html" title="FAQ Client">FAQ Client</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_DebuggingAndCompiling.html" ahref="/doc/latest/FAQ_DebuggingAndCompiling.html" title="FAQ Debugging And Compiling">FAQ Debugging And Compiling</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_GettingStarted.html" ahref="/doc/latest/FAQ_GettingStarted.html" title="FAQ Getting Started">FAQ Getting Started</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_Server.html" ahref="/doc/latest/FAQ_Server.html" title="FAQ Server">FAQ Server</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_Troubleshooting.html" ahref="/doc/latest/FAQ_Troubleshooting.html" title="FAQ Troubleshooting">FAQ Troubleshooting</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ_UI.html" ahref="/doc/latest/FAQ_UI.html" title="FAQ UI">FAQ UI</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/FAQ.html" ahref="/doc/latest/FAQ.html" title="FAQ">FAQ</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/RefCommandLineTools.html" ahref="/doc/latest/RefCommandLineTools.html" title="Ref Command Line Tools">Ref Command Line Tools</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/RefGuide.html" ahref="/doc/latest/RefGuide.html" title="Ref Guide">Ref Guide</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/RefGWTClassAPI.html" ahref="/doc/latest/RefGWTClassAPI.html" title="Ref GWT Class API">Ref GWT Class API</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/RefJreEmulation.html" ahref="/doc/latest/RefJreEmulation.html" title="Ref Jre Emulation">Ref Jre Emulation</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/RefWidgetGallery.html" ahref="/doc/latest/RefWidgetGallery.html" title="Ref Widget Gallery">Ref Widget Gallery</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/ReleaseNotes.html" ahref="/doc/latest/ReleaseNotes.html" title="Release Notes">Release Notes</a></li><li class="folder"><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#">tutorial</a><ul style="display: none;"><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/JSON.html" ahref="/doc/latest/tutorial/JSON.html" title="">JSON</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/JSONphp.html" ahref="/doc/latest/tutorial/JSONphp.html" title="">JSONphp</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/JUnit.html" ahref="/doc/latest/tutorial/JUnit.html" title="">JUnit</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/RPC.html" ahref="/doc/latest/tutorial/RPC.html" title="">RPC</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/Xsite.html" ahref="/doc/latest/tutorial/Xsite.html" title="">Xsite</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/appengine.html" ahref="/doc/latest/tutorial/appengine.html" title="">appengine</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/buildui.html" ahref="/doc/latest/tutorial/buildui.html" title="">buildui</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/clientserver.html" ahref="/doc/latest/tutorial/clientserver.html" title="">clientserver</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/codeclient.html" ahref="/doc/latest/tutorial/codeclient.html" title="">codeclient</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/compile.html" ahref="/doc/latest/tutorial/compile.html" title="">compile</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/create.html" ahref="/doc/latest/tutorial/create.html" title="">create</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/debug.html" ahref="/doc/latest/tutorial/debug.html" title="">debug</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/design.html" ahref="/doc/latest/tutorial/design.html" title="">design</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/gettingstarted.html" ahref="/doc/latest/tutorial/gettingstarted.html" title="">gettingstarted</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/i18n.html" ahref="/doc/latest/tutorial/i18n.html" title="">i18n</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/index.html" ahref="/doc/latest/tutorial/index.html" title="">index</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/manageevents.html" ahref="/doc/latest/tutorial/manageevents.html" title="">manageevents</a></li><li class="file"><a href="http://www.gwtproject.org/doc/latest/tutorial/style.html" ahref="/doc/latest/tutorial/style.html" title="">style</a></li></ul></li></ul></li></ul></li><li class="file"><a href="http://www.gwtproject.org/books.html" ahref="/books.html" title="GWT Books">Books</a></li><li class="file"><a href="http://www.gwtproject.org/casestudies.html" ahref="/casestudies.html" title="Case Studies for using GWT">Case Studies</a></li><li class="file"><a href="http://www.gwtproject.org/community.html" ahref="/community.html" title="Community">Community</a></li><li class="file"><a href="http://www.gwtproject.org/community-group-charter.html" ahref="/community-group-charter.html" title="Community Group Charter">Community Group</a></li><li class="file"><a href="http://www.gwtproject.org/developer_spotlight.html" ahref="/developer_spotlight.html" title="Developer Spotlight">Developer Spotlight</a></li><li class="file"><a href="http://www.gwtproject.org/download.html" ahref="/download.html" title="Download GWT">Download</a></li><li class="file"><a href="http://www.gwtproject.org/examples.html" ahref="/examples.html" title="Examples">Examples</a></li><li class="file"><a href="http://www.gwtproject.org/gettingstarted.html" ahref="/gettingstarted.html" title="Getting Started with GWT">Getting Started</a></li><li class="file"><a href="http://www.gwtproject.org/learnmore-sdk.html" ahref="/learnmore-sdk.html" title="Learn more about the GWT SDK">SDK Learn More</a></li><li class="file"><a href="http://www.gwtproject.org/lifeofanissue.html" ahref="/lifeofanissue.html" title="Learn about GWT and the issue tracker">Life of an Issue</a></li><li class="file"><a href="http://www.gwtproject.org/makinggwtbetter.html" ahref="/makinggwtbetter.html" title="Learn how to contribute to GWT">Making GWT Better</a></li><li class="file"><a href="http://www.gwtproject.org/overview.html" ahref="/overview.html" title="Overview">Overview</a></li><li class="file"><a href="http://www.gwtproject.org/presentations.html" ahref="/presentations.html" title="Different Presentations on GWT">Presentations</a></li><li class="file"><a href="http://www.gwtproject.org/privacy.html" ahref="/privacy.html" title="Privacy">Privacy</a></li><li class="file"><a href="http://www.gwtproject.org/release-notes.html" ahref="/release-notes.html" title="Release Notes">Release Notes</a></li><li class="file"><a href="http://www.gwtproject.org/resources.html" ahref="/resources.html" title="Resources">Resources</a></li><li class="file"><a href="http://www.gwtproject.org/steering.html" ahref="/steering.html" title="The GWT Steering Committee">Steering Committee</a></li><li class="file"><a href="http://www.gwtproject.org/terms.html" ahref="/terms.html" title="Terms">Terms</a></li><li class="file"><a href="http://www.gwtproject.org/usingeclipse.html" ahref="/usingeclipse.html" title="Using Eclipse">Using Eclipse</a></li><li class="file"><a href="http://www.gwtproject.org/versions.html" ahref="/versions.html" title="Versions">Versions</a></li><li class="file"><a href="http://www.gwtproject.org/whos_using_gwt.html" ahref="/whos_using_gwt.html" title="Who is using GWT">Who is using GWT?</a></li><li class="file"><a href="http://www.gwtproject.org/gwt_surveys.html" ahref="/gwt_surveys.html" title="GWT surveys">GWT surveys</a></li></ul>
+  </div>
+  <div id="gwt-content">
+    <div>
+    <ol class="toc" id="pageToc">
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#BasicPanels">Basic Panels</a></li>
+  <li><a href="./GWT Project_files/GWT Project.htm">Layout Panels</a></li>
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Animation">Animation</a></li>
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Resize">RequiresResize and ProvidesResize</a></li>
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Standards">Moving to Standards Mode</a></li>
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Design">Design of the GWT 2.0 layout system</a></li>
+  <li><a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Recipes">Recipes</a></li>
+</ol>
+<p>Panels in GWT are much like their layout counterparts in other user interface
+libraries. The main difference is that GWT panels use HTML elements to lay out
+their child widgets.</p>
+<p>Panels contain widgets and other panels. They are used to define the layout of
+the user interface in the browser.</p>
+<h2 id="BasicPanels">Basic Panels</h2>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a></h3>
+<p>A <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a> is the top-most panel to which all other widgets are ultimately
+attached. <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html#get()">RootPanel.get()</a> gets a singleton panel that wraps the HTML document's
+<code>&lt;body&gt;</code> element. Use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html#get(java.lang.String)">RootPanel.get(String id)</a> to get a panel for any other
+element on the page.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a></h3>
+<p>A <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a> is the simplest panel. It creates a single <code>&lt;div&gt;</code> element and
+attaches children directly to it without modification. Use it in cases where
+you want the natural HTML flow to determine the layout of child widgets.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/HTMLPanel.html">HTMLPanel</a></h3>
+<p>This panel provides a simple way to define an HTML structure, within which
+widgets will be embedded at defined points. While you may use it directly, it
+is most commonly used in <a href="http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html">UiBinder templates</a>.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FormPanel.html">FormPanel</a></h3>
+<p>When you need to reproduce the behavior of an HTML form (e.g., for interacting
+with servers that expect form POST requests, or simply to get the default form
+keyboard behavior in the browser), you can use a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FormPanel.html">FormPanel</a>. Any widgets wrapped
+by this panel will be wrapped in a <code>&lt;form&gt;</code> element.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ScrollPanel.html">ScrollPanel</a></h3>
+<p>When you wish to create a scrollable area within another panel, you should use
+a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ScrollPanel.html">ScrollPanel</a>. This panel works well in layout panels (see below), which
+provide it with the explicit size it needs to scroll properly.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/DialogBox.html">DialogBox</a></h3>
+<p>Use these two panels to create simple popups and modal dialogs. They overlap
+existing content in browser window, and can be stacked over one-another.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/Grid.html">Grid</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/FlexTable.html">FlexTable</a></h3>
+<p>These two widgets are used to create traditional HTML <code>&lt;table&gt;</code> elements, and can
+also be used as panels, in that arbitrary widgets may be added to their cells.</p>
+<h2 id="LayoutPanels">Layout Panels</h2>
+<p>GWT 2.0 introduces a number of new panels, which together form a stable basis
+for fast and predictable application-level layout. For background and details,
+see <a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Design">"Design of the GWT 2.0 layout system"</a> below.</p>
+<p>The bulk of the layout system is embodied in a series of panel widgets. Each
+of these widgets uses the underlying layout system to position its children
+in a dependable manner.</p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a></h3>
+<p>This panel is a singleton that serves as a root container to which all other
+layout panels should be attached (see RequiresResize and ProvidesResize <a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#Resize">below</a> for details). It extends
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a>, and thus you can position any number of children with
+arbitrary constraints.</p>
+<p>You most commonly use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a> as a container for another panel, as in
+the following snippet, which causes a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a> to fill the browser's
+client area:</p>
+<pre class="prettyprint">DockLayoutPanel appPanel = new DockLayoutPanel(Unit.EM);
+RootLayoutPanel.get().add(appPanel);
+</pre>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a></h3>
+<p>Think of <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a> as the most general layout mechanism, and often one upon
+which other layouts are built. Its closest analog is <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/AbsolutePanel.html">AbsolutePanel</a>, but it is
+significantly more general in that it allows its children to be positioned
+using arbitrary constraints, as in the following example:</p>
+<pre class="prettyprint">Widget child0, child1, child2;
+LayoutPanel p = new LayoutPanel();
+p.add(child0); p.add(child1); p.add(child2);
+
+p.setWidgetLeftWidth(child0, 0, PCT, 50, PCT);  // Left panel
+p.setWidgetRightWidth(child1, 0, PCT, 50, PCT); // Right panel
+
+p.setWidgetLeftRight(child2, 5, EM, 5, EM);     // Center panel
+p.setWidgetTopBottom(child2, 5, EM, 5, EM);
+</pre>
+<p><img src="./GWT Project_files/LayoutPanel.png" alt="LayoutPanel example" title=""></p>
+<h3><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a></h3>
+<p><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a> serves the same purpose as the existing <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/DockPanel.html">DockPanel</a> widget,
+except that it uses the layout system to achieve this structure without using
+tables, and in a predictable manner. You would often use to build
+application-level structure, as in the following example:</p>
+<pre class="prettyprint">DockLayoutPanel p = new DockLayoutPanel(Unit.EM);
+p.addNorth(new HTML("header"), 2);
+p.addSouth(new HTML("footer"), 2);
+p.addWest(new HTML("navigation"), 10);
+p.add(new HTML(content));
+</pre>
+<p><img src="./GWT Project_files/DockLayoutPanel.png" alt="DockLayoutPanel example" title=""></p>
+<p>Note that <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a> requires the use of consistent units for all
+children, specified in the constructor. It also requires that the size of each
+child widget (except the last, which consumes all remaining space) be specified
+explicitly along its primary axis.</p>
+<h3>SplitLayoutPanel</h3>
+<p>The <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/SplitLayoutPanel.html">SplitLayoutPanel</a> is identical to the <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a> (and indeed
+extends it), except that it automatically creates a user-draggable splitter
+between each pair of child widgets. It also supports only the use of pixel
+units. Use this instead of <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/HorizontalSplitPanel.html">HorizontalSplitPanel</a> and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/VerticalSplitPanel.html">VerticalSplitPanel</a>.</p>
+<pre class="prettyprint">SplitLayoutPanel p = new SplitLayoutPanel();
+p.addWest(new HTML("navigation"), 128);
+p.addNorth(new HTML("list"), 384);
+p.add(new HTML("details"));
+</pre>
+<p><img src="./GWT Project_files/SplitLayoutPanel.png" alt="SplitLayoutPanel example" title=""></p>
+<h3>StackLayoutPanel</h3>
+<p><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/StackLayoutPanel.html">StackLayoutPanel</a> replaces the existing <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/StackPanel.html">StackPanel</a> (which does not work very
+well in standards mode). It displays one child widget at a time, each of which is
+associated with a single "header" widget. Clicking on a header widget shows its
+associated child widget.</p>
+<pre class="prettyprint">StackLayoutPanel p = new StackLayoutPanel(Unit.EM);
+p.add(new HTML("this content"), new HTML("this"), 4);
+p.add(new HTML("that content"), new HTML("that"), 4);
+p.add(new HTML("the other content"), new HTML("the other"), 4);
+</pre>
+<p><img src="./GWT Project_files/StackLayoutPanel.png" alt="StackLayoutPanel example" title=""></p>
+<p>Note that, as with <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a>, only a single unit type may be used on a
+given panel. The length value provided to the <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html#add(com.google.gwt.user.client.ui.Widget)">add()</a>
+method specifies the size of the header widget, which must be of a fixed size.</p>
+<h3>TabLayoutPanel</h3>
+<p>As with the existing <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/TabPanel.html">TabPanel</a>, <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/TabLayoutPanel.html">TabLayoutPanel</a> displays a row of clickable
+tabs. Each tab is associated with another child widget, which is shown when a
+user clicks on the tab.</p>
+<pre class="prettyprint">TabLayoutPanel p = new TabLayoutPanel(1.5, Unit.EM);
+p.add(new HTML("this content"), "this");
+p.add(new HTML("that content"), "that");
+p.add(new HTML("the other content"), "the other");
+</pre>
+<p><img src="./GWT Project_files/TabLayoutPanel.png" alt="TabLayoutPanel example" title=""></p>
+<p>The length value provided to the <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/TabLayoutPanel.html">TabLayoutPanel</a> constructor specifies the
+height of the tab bar, which you must explicitly provide.</p>
+<h3>When should I <em>not</em> use layout panels?</h3>
+<p>The panels described above are best used for defining your application's outer
+structure — that is, the parts that are the least "document-like". You
+should continue to use basic widgets and HTML structure for those parts for
+which the HTML/CSS layout algorithm works well. In particular, consider using
+<a href="http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html">UiBinder templates</a> to directly use HTML wherever that makes sense.</p>
+<h2 id="Animation">Animation</h2>
+<p>The GWT 2.0 layout system has direct, built-in support for animation. This is
+necessary to support a number of use-cases, because the layout system must
+properly handle animation among sets of layout constraints.</p>
+<p>Panels that implement <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/AnimatedLayout.html">AnimatedLayout</a>, such as <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a>,
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a>, and <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/SplitLayoutPanel.html">SplitLayoutPanel</a>, can animate their child widgets from
+one set of constraints to another. Typically this is done by setting up the
+state towards which you wish to animate, then calling
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/AnimatedLayout.html#animate(int)">animate()</a>. See <a href="http://www.gwtproject.org/doc/latest/DevGuideUiPanels.html#recipes">"Recipes"</a>
+below for specific examples.</p>
+<h2 id="Resize">RequiresResize and ProvidesResize</h2>
+<p>Two new characteristic interfaces were introduced in GWT 2.0: <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html">RequiresResize</a>
+and <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ProvidesResize.html">ProvidesResize</a>. These are used to propagate notification of resize events
+throughout the widget hierarchy.</p>
+<p><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html">RequiresResize</a> provides a single method,
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html#onResize()">onResize()</a>, which is called by the widget's parent
+whenever the child's size has changed. <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ProvidesResize.html">ProvidesResize</a> is simply a tag
+interface indicating that a parent widget will honor this contract. The purpose
+of these two interfaces is to form an unbroken hierarchy between all widgets
+that implement RequiresResize and the <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a>, which listens for any
+changes (such as the browser window resizing) that could affect the size of
+widgets in the hierarchy.</p>
+<h3>When to use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html#onResize()">onResize()</a></h3>
+<p>Most widgets should <em>not</em> need to know when they've been resized, as the
+browser's layout engine should be doing most of the work. However, there are
+times when a widget <em>does</em> need to know. This comes up, for example, when a
+widget contains a dynamic list of items depending upon how much room is
+available to display them. Because it's almost always faster to let the layout
+engine do its work than to run code, you should not lean upon
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html#onResize()">onResize()</a> unless you have no alternative.</p>
+<h3>When and how to implement ProvidesResize</h3>
+<p>A panel that implements ProvidesResize is expected to propagate resize events
+to any of its child widgets that implement RequiresResize. For a canonical
+example of this, see the implementation of <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html#onResize()">LayoutPanel.onResize()</a>. Most
+custom widgets will want to composite an existing layout panel using
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ResizeComposite.html">ResizeComposite</a>, however, as described next.</p>
+<h3>ResizeComposite</h3>
+<p>When creating a custom <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/Composite.html">Composite</a> widget that wrap a widget that implements
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html">RequiresResize</a>, you should use <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/ResizeComposite.html">ResizeComposite</a> as its base class. This
+subclass of <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/Composite.html">Composite</a> automatically propagates resize events to its wrapped
+widget.</p>
+<h2 id="Standards">Moving to Standards Mode</h2>
+<p>The GWT 2.0 layout system is intended to work only in "standards mode". This
+means that you should always place the following declaration at the top of your
+HTML pages:
+    <code>&lt;!DOCTYPE html&gt;</code></p>
+<h3>What won't work in standards mode?</h3>
+<p>As mentioned above, some of the existing GWT panels do not behave entirely as
+expected in standards mode. This stems primarily from differences between the
+way standards and quirks modes render tables.</p>
+<h4>CellPanel (HorizontalPanel, VerticalPanel, DockPanel)</h4>
+<p>These panels all use table cells as their basic structural units. While they
+still work in standards mode, they will lay out their children somewhat
+differently. The main difference is that their children will not respect width
+and height properties (it is common to set children of CellPanels explicitly to
+100% width and height). There are also differences in the way that the browser
+allocates space to individual table rows and columns that can lead to
+unexpected behavior in standards mode.</p>
+<p>You should use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a> in place of <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/DockPanel.html">DockPanel</a>. <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/VerticalPanel.html">VerticalPanel</a> can
+usually be replaced by a simple <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a> (since block-level elements will
+naturally stack up vertically).</p>
+<p><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/HorizontalPanel.html">HorizontalPanel</a> is a bit trickier. In some cases, you can simply replace it
+with a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a>, but that requires that you specify its childrens'
+widths explicitly. The most common alternative is to use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a>, and to
+use the <code>float: left;</code> CSS property on its children. And of course, you can
+continue to use <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/HorizontalPanel.html">HorizontalPanel</a> itself, as long as you take the caveats above
+into account.</p>
+<h4>StackPanel</h4>
+<p>StackPanels do not work very well in standards mode. Because of the differences
+in table rendering mentioned above, StackPanel will almost certainly not do
+what you expect in standards mode, and you should replace them with
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/StackLayoutPanel.html">StackLayoutPanel</a>.</p>
+<h4>SplitPanel (HorizontalSplitPanel and VerticalSplitPanel)</h4>
+<p>SplitPanels are very unpredictable in standards mode, and you should almost
+invariably replace them with <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/SplitLayoutPanel.html">SplitLayoutPanel</a>.</p>
+<h2 id="Design">Design of the GWT 2.0 layout system</h2>
+<p>Prior to 2.0, GWT's mechanisms for handling application-level layout have a
+number of significant problems:</p>
+<ul>
+<li>They're unpredictable.</li>
+<li>They often require extra code to fix up their deficiencies:
+<ul><li>For example, causing an application to fill the browser's client area with
+interior scrolling is nearly impossible without extra code.</li></ul></li>
+<li>They don't all work well in standards mode.</li>
+</ul>
+<p>Their underlying motivation was sound — the intention was to let the
+browser's native layout engine do almost all of the work. But the above
+deficiencies can be crippling.</p>
+<h3>Goals</h3>
+<ul>
+<li>Perfectly predictable layout behavior. Precision layout should be possible.
+<ul><li>It should also work in the presence of CSS decorations (border, margin, and
+padding) with arbitrary units.</li></ul></li>
+<li>Work correctly in standards-mode.</li>
+<li>Get the browser to do almost all of the work in its layout engine.
+<ul><li>Manual adjustments should occur only when strictly necessary.</li></ul></li>
+<li>Smooth, automatic animation.</li>
+</ul>
+<h3>Non-Goals</h3>
+<ul>
+<li>Work in quirks-mode.</li>
+<li>Swing-style layout based on "preferred size". This is effectively
+intractable in the browser.</li>
+<li>Take over all layout. This design is intended to handle coarse-grained
+"desktop-like" layout. The individual bits and pieces, such as form elements,
+buttons, tables, and text should still be laid out naturally.</li>
+</ul>
+<h3>The Layout class</h3>
+<p>The <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/layout/client/Layout.html">Layout</a> class contains all the underlying logic used by the layout system,
+along with all the implementation details used to normalize layout behavior on
+various browsers.</p>
+<p>It is actually widget-agnostic, operating directly on DOM elements. Most
+applications will have no reason to work directly with this class, but it should
+prove useful to alternate widget library writers.</p>
+<h3>Constraint-based Layout</h3>
+<p>The GWT 2.0 layout system is built upon the simple constraint system that
+exists natively in CSS. This uses the properties <code>left</code>, <code>top</code>, <code>width</code>,
+<code>height</code>, <code>right</code>, and <code>bottom</code>. While most developers are familiar with these
+properties, it is less well-known that they can be combined in various ways to
+form a simple constraint system. Take the following CSS example:</p>
+<pre class="prettyprint">.parent {
+  position: relative; /* to establish positioning context */
+}
+
+.child {
+  position: absolute; left:1em; top:1em; right:1em; bottom:1em;
+}
+</pre>
+<p>In this example, the child will automatically consume the parent's entire
+space, minus 1em of space around the edge. Any two of these properties (on each
+axis) forms a valid constraint pair (three would be degenerate), producing lots
+of interesting possibilities. This is especially true when you consider various
+mixtures of relative units, such as "em" and "%".</p>
+<h2 id="Recipes">Recipes</h2>
+<p>The following are a series of simple "recipes" for creating various structures
+and dealing with different scenarios. Where possible, we'll describe the layout
+in terms of <a href="http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html">UiBinder</a> templates.</p>
+<h3>Basic application layout</h3>
+<p>The following sample shows a simple application-style layout with a header, a
+navigation area on the left edge, and a scrollable content area.</p>
+<pre class="prettyprint">&lt;g:DockLayoutPanel unit='EM'&gt;
+  &lt;g:north size='4'&gt;
+    &lt;g:Label&gt;Header&lt;/g:Label&gt;
+  &lt;/g:north&gt;
+
+  &lt;g:west size='16'&gt;
+    &lt;g:Label&gt;Navigation&lt;/g:Label&gt;
+  &lt;/g:west&gt;
+
+  &lt;g:center&gt;
+    &lt;g:ScrollPanel&gt;
+      &lt;g:Label&gt;Content Area&lt;/g:Label&gt;
+    &lt;/g:ScrollPanel&gt;
+  &lt;/g:center&gt;
+&lt;/g:DockLayoutPanel&gt;
+</pre>
+<p>You must place this structure in a container that implements <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ProvidesResize.html">ProvidesResize</a>,
+which is most commonly <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a>. The following code demonstrates how
+to do this:</p>
+<pre class="prettyprint">interface Binder extends UiBinder&lt;Widget, BasicApp&gt; { }
+private static final Binder binder = GWT.create(Binder.class);
+
+public void onModuleLoad() {
+  RootLayoutPanel.get().add(binder.createAndBindUi());
+}
+</pre>
+<h3>Splitters</h3>
+<p><a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/SplitLayoutPanel.html">SplitLayoutPanel</a> works much like <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/DockLayoutPanel.html">DockLayoutPanel</a>, except that it only
+supports pixel units. The basic application structure above can be given a
+splitter between the navigation and content areas like so:</p>
+<pre class="prettyprint">&lt;g:DockLayoutPanel unit='EM'&gt;
+  &lt;g:north size='4'&gt;
+    &lt;g:Label&gt;Header&lt;/g:Label&gt;
+  &lt;/g:north&gt;
+
+  &lt;g:center&gt;
+    &lt;g:SplitLayoutPanel&gt;
+      &lt;g:west size='128'&gt;
+        &lt;g:Label&gt;Navigation&lt;/g:Label&gt;
+      &lt;/g:west&gt;
+
+      &lt;g:center&gt;
+        &lt;g:ScrollPanel&gt;
+          &lt;g:Label&gt;Content Area&lt;/g:Label&gt;
+        &lt;/g:ScrollPanel&gt;
+      &lt;/g:center&gt;
+    &lt;/g:SplitLayoutPanel&gt;
+  &lt;/g:center&gt;
+&lt;/g:DockLayoutPanel&gt;
+</pre>
+<p>Note how we mix the dock and split panels, so that the header's size can be
+specified in <code>EM</code> units.</p>
+<h3>Layout animation</h3>
+<p>To use animation with a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a>, you must first create an initial set of
+constraints, then animate to a target set of constraints. In the following
+example, we start with a child widget positioned at the top, but with no height
+so that it is effectively hidden. Calling <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html#forceLayout()">LayoutPanel.forceLayout()</a> "fixes"
+the initial constraints.</p>
+<pre class="prettyprint">panel.setWidgetTopHeight(child, 0, PX, 0, PX);
+panel.forceLayout();
+</pre>
+<p>Now we give the widget a height of 2em and explicitly call
+LayoutPanel.animate(int) to cause it to resize over 500 ms.</p>
+<pre class="prettyprint">panel.setWidgetTopHeight(child, 0, PX, 2, EM);
+panel.animate(500);
+</pre>
+<p>This will work with any constraints and any number of children.</p>
+<h3>Implementing a Composite that RequiresResize</h3>
+<p>Widgets that implement <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html">RequiresResize</a> expect <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/RequiresResize.html#onResize()">RequiresResize.onResize()</a> to
+be called whenever the widget's size changes. If you are wrapping such a widget
+in a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/Composite.html">Composite</a>, you'll need to use <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/ResizeComposite.html">ResizeComposite</a> instead to ensure that
+this call is propagated correctly, like so:</p>
+<pre class="prettyprint">class MyWidget extends ResizeComposite {
+  private LayoutPanel p = new LayoutPanel();
+
+  public MyWidget() {
+    initWidget(p);
+  }
+}
+</pre>
+<h3>Child widget visibility</h3>
+<p>The <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/layout/client/Layout.html">Layout</a> class has to wrap each of its child elements in a "container"
+element in order to work properly. One implication of this is that, when you
+call <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/UIObject.html#setVisible(boolean)">UIObject.setVisible(boolean)</a> on a widget within a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html">LayoutPanel</a>, it
+won't behave quite as expected: the widget will indeed be made invisible, but
+it will tend to consume mouse events (actually, it's the container element that
+is doing so).</p>
+<p>To work around this, you can get the container element directly using
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/LayoutPanel.html#getWidgetContainerElement(com.google.gwt.user.client.ui.Widget)">LayoutPanel.getWidgetContainerElement(Widget)</a>, and set its visibility
+directly:</p>
+<pre class="prettyprint">LayoutPanel panel = ...;
+Widget child;
+panel.add(child);
+UIObject.setVisible(panel.getWidgetContainerElement(child), false);
+</pre>
+<h3>Using a LayoutPanel without RootLayoutPanel</h3>
+<p>In most cases you should use layout panels by attaching them to a
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a>, either directly or via other panels that implement
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/ProvidesResize.html">ProvidesResize</a>.</p>
+<p>There are, however, instances where you need to use a layout panel within a
+normal widget (e.g., <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/FlowPanel.html">FlowPanel</a> or <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a>). In these cases, you will need
+to set the panel's size explicitly, as in the following example:</p>
+<pre class="prettyprint">LayoutPanel panel = new LayoutPanel();
+RootPanel.get("someId").add(panel);
+panel.setSize("20em", "10em");
+</pre>
+<p>Note that <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootLayoutPanel.html">RootLayoutPanel</a> provides no
+mechanism for wrapping an arbitrary element like <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RootPanel.html">RootPanel</a>
+does. This is because it is impossible to know when an arbitrary element has been resized by the browser. If you want to resize a layout panel in an arbitrary element,
+you must do so manually.</p>
+<p>This also applies to layout panels used in <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/PopupPanel.html">PopupPanel</a> and
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DialogBox.html">DialogBox</a>. The following example shows the use of a <a href="http://google-web-toolkit.googlecode.com/svn/javadoc/latest/com/google/gwt/user/client/ui/SplitLayoutPanel.html">SplitLayoutPanel</a> in a
+<a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/DialogBox.html">DialogBox</a>:</p>
+<pre class="prettyprint">SplitLayoutPanel split = new SplitLayoutPanel();
+split.addWest(new HTML("west"), 128);
+split.add(new HTML("center"));
+split.setSize("20em", "10em");
+
+DialogBox dialog = new DialogBox();
+dialog.setText("caption");
+dialog.add(split);
+dialog.show();
+</pre>
+<h3>Tables and Frames</h3>
+<p>Widgets that are implemented using &lt;table&gt; or &lt;frame&gt; elements do not
+automatically fill the space provided by the layout. In order to fix this, you
+will need to explicitly set these widgets <code>width</code> and <code>height</code> to <code>100%</code>. The
+following example shows this with a <a href="http://www.gwtproject.org/javadoc/latest/com/google/gwt/user/client/ui/RichTextArea.html">RichTextArea</a>, which is implemented using
+an &lt;iframe&gt; element.</p>
+<pre style="prettyprint">&lt;g:DockLayoutPanel unit='EM'&gt;
+  &lt;g:north size='2'&gt;
+    &lt;g:HTML&gt;Header&lt;/g:HTML&gt;
+  &lt;/g:north&gt;
+
+  &lt;g:south size='2'&gt;
+    &lt;g:HTML&gt;Footer&lt;/g:HTML&gt;
+  &lt;/g:south&gt;
+
+  &lt;g:center&gt;
+    &lt;g:RichTextArea width='100%' height='100%'/&gt;
+  &lt;/g:center&gt;
+&lt;/g:DockLayoutPanel&gt;
+</pre>
+    </div>
+  </div>
+</div>
+
+<div id="gwt-footer">
+  <div class="gwt-wrap">
+    <div class="gwt-license">Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.</div>
+  </div>
+</div>
+	
+	
+	
+
+<iframe src="javascript:""" id="gwtproject" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;"></iframe></body></html>

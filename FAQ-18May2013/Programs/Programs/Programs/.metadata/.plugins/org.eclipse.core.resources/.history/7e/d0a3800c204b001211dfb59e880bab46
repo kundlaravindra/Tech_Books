@@ -1,0 +1,12 @@
+package sample;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DelelingDublicatObjects {
+	public static void main(String[] args) {
+		List l=new ArrayList();
+
+	}
+
+}

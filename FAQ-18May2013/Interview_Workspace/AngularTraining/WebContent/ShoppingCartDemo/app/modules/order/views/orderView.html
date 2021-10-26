@@ -1,0 +1,22 @@
+<fieldset ng-controller="orderController">
+	<legend>Order Details</legend>
+	
+	<table>
+		<tr>
+			<td>Product Name </td>
+			<td> {{selectedProduct.name}} </td>
+		</tr>
+		<tr>
+			<td>Product Desc </td>
+			<td> {{selectedProduct.desc}} </td>
+		</tr>
+		<tr>
+			<td>Product Cost </td>
+			<td> {{selectedProduct.price}} </td>
+		</tr>
+		<tr>
+			<td>Confirm Your Order </td>
+			<td> <input type="button" value= "Confirm" ng-click="confirm()" /> </td>
+		</tr>
+	</table>	
+</fieldset>

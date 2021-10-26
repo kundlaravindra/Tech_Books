@@ -1,0 +1,20 @@
+package paper1;
+
+import javax.swing.tree.FixedHeightLayoutCache;
+
+public class PassA {
+	void start(){
+		long[] a1={3,4,4};
+		long[] a2=fix(a1);
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PassA p=new PassA();
+		p.start();
+	}
+
+}

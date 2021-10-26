@@ -1,0 +1,24 @@
+class Boxy
+{
+   double w,h,l;
+   
+   double volume()
+   {
+     return System.out.println(w*h*l);
+     System.out.println(w+h+l);
+   }
+  
+}
+
+class BoxyDem
+{
+public static void main(String args[])
+{
+Box myboxy = new Box(String a);
+myboxy.w = 10;
+myboxy.h = 20;
+myboxy.l = 30;
+
+ myboxy.volume();
+}
+}

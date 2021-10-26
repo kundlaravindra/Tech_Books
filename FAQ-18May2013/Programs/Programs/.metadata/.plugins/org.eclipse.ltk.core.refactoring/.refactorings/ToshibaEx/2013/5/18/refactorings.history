@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.toshiba.NewClass1&apos; to &apos;GetKeyUsingValue&apos;&#x0D;&#x0A;- Original project: &apos;ToshibaEx&apos;&#x0D;&#x0A;- Original element: &apos;com.toshiba.NewClass1&apos;&#x0D;&#x0A;- Renamed element: &apos;com.toshiba.GetKeyUsingValue&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NewClass1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.toshiba{NewClass1.java[NewClass1" matchStrategy="1" name="GetKeyUsingValue" qualified="false" references="true" similarDeclarations="false" stamp="1367689870883" textual="false" version="1.0"/>
+</session>

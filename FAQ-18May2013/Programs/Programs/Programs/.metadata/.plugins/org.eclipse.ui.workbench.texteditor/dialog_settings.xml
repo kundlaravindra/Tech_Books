@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="388" key="DIALOG_Y_ORIGIN"/>
+		<item value="673" key="DIALOG_X_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="bean" key="selection"/>
+		<list key="findhistory">
+			<item value="bean"/>
+			<item value="callme"/>
+			<item value="args"/>
+			<item value="serio"/>
+			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=ISO-8859-1&quot;"/>
+			<item value="style"/>
+			<item value="main"/>
+			<item value="boogie"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&quot;javascript:openCal()"/>
+		</list>
+	</section>
+</section>

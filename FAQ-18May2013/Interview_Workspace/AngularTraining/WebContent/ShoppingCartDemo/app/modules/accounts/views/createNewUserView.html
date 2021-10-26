@@ -1,0 +1,19 @@
+<fieldset ng-controller="accountsController">
+			<legend>Login View</legend>
+			
+			<p> {{loginStatus}}</p>
+				<table>
+					<tr>
+						<td>UserName</td>
+						<td><input type="text" ng-model="Credentials.username"/></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" ng-model="Credentials.password"/></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Signup"  ng-click="signup()" /> </td>
+						<td><input type="Reset" value="Clear" /> </td>
+					</tr>
+				</table>
+		</fieldset>

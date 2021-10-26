@@ -1,0 +1,23 @@
+<fieldset ng-controller="productsController">
+	<legend> Select Product from Products List </legend>
+
+	<table>
+		<thead>
+			<tr> 
+				<th> Product Name</th>
+				<th> Product Desc</th>
+				<th> Product Cost</th>
+				<th> Add to Cart</th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="product in productList">
+			<tr> 
+				<td> {{ product.name}}</td>
+				<td> {{ product.desc}}</td>
+				<td> {{ product.price}}</td>
+				<td> <input type="button" value="AddToCart" ng-click= "selectProduct(product)" /></td>
+			</tr>
+		</tbody>
+	
+	</table>
+</fieldSet>

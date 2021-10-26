@@ -1,0 +1,47 @@
+
+<HTML>
+<HEAD>
+<script type="text/javascript">
+
+    //--Function to get the xmlhttp object
+    function getHttpObject(){
+        var xmlhttp = null;
+        if (window.XMLHttpRequest){xmlhttp=new XMLHttpRequest();}
+        else if (window.ActiveXObject){xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+        else {alert("Your browser does not support XMLHTTP!");}
+        return xmlhttp;
+    }    
+
+    //--Function to populate the school select box
+    function populateState(str){
+        xmlhttp = getHttpObject();
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4){
+                ajxfrm.state.value=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","ajaxServlet?city="+str,true);
+        xmlhttp.send(null);
+    }
+
+
+</script>
+</HEAD>
+<BODY>
+<form name="ajxfrm">
+    <table>
+        <!-- city  -->
+        <tr>
+            <td>City</td><td><input type="text" name="city" value=""/></td>
+        </tr>
+        
+        <!--  state -->
+        <tr>
+            <td>State</td><td><input type="text" name="state" value="" onfocus="populateState(ajxfrm.city.value);"/></td>
+        </tr>
+    </table>
+
+</form>
+</BODY>
+</HTML>
+

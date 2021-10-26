@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<style>
+		header{
+			width:100%;
+			height:30px;
+			border-bottom-style:solid;
+		}
+		main{
+			clear:both;
+			float:left;
+			width:100%;
+			height:500px;
+			border-bottom-style:solid;
+		}
+		footer{
+			clear:both;
+			float:center;
+			width:100%;
+			height:30px;
+			/* border-bottom-style:solid; */
+		}	
+	</style>
+	<script src="lib/angular.min.js"></script>
+	<script>
+		angular.module("utilities",[]).service("orderCalculator", function(){
+			
+			this.calculateNetCost = function(productCost, quantity, isGoldcustomer){
+				return (productCost * quantity) + 300;
+			};
+		});
+		
+		angular.module("mainModule",['utilities']).
+			controller("orderController",['orderCalculator','$scope',
+			                              function(orderCalculator,$scope){
+				
+				$scope.price=0;
+				$scope.quantity=0;
+				$scope.customerType="";
+				$scope.netCost=0;
+				$scope.calculateOrderCost=function(){
+					$scope.netCost = 
+							orderCalculator.calculateNetCost(
+							parseInt($scope.price),
+							parseInt($scope.quantity),
+							$scope.customerType);
+				};
+			}]);
+	</script>
+</head>
+<body>
+	<header>
+		<h1>SysTeleca Online Portal</h1>
+	</header>
+	<main>
+		<fieldset ng-controller="orderController">
+			<legend> OrderCalculator</legend>
+			<table>
+				<tr>
+					<td>Enter Product Cost</td>
+					<td><input type="text" ng-model="price"></td>
+				</tr>
+				<tr>
+					<td>Enter Product Quantity</td>
+					<td><input type="text" ng-model="quantity"></td>
+				</tr>
+				<tr>
+					<td>CustomerType</td>
+					<td><input type="text" ng-model="customerType"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Calculate" ng-click="calculateOrderCost()"></td>
+					<td><input type="reset" value="Clear"></td>
+				</tr>
+				<tr>
+					<td>NetCost</td>
+					<td><output>{{ netCost }}</output></td>
+				</tr>
+			</table>
+			
+		</fieldset>
+	</main>
+	<footer>
+		<center>SysTeleca banglaore <br> @2015</center>
+	</footer>
+</body>
+</html>

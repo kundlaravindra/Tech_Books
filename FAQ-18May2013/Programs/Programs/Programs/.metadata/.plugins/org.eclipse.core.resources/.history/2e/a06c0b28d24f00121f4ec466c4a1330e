@@ -1,0 +1,16 @@
+package Com.pavan;
+
+public class MarlabsExamples {
+	static int i=10;
+	class Example{
+		int i;
+		void Do(){
+			System.out.println(i);
+			
+		}
+	}
+public static void main(String[] args) {
+	MarlabsExamples m= new MarlabsExamples();
+	m.new Example().Do();
+}
+}

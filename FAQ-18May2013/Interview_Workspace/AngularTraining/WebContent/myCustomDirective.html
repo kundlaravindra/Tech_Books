@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="testModule">
+<head>
+	<meta charset="ISO-8859-1">
+	<script src="lib/angular.min.js"></script>
+	<title>Insert title here</title>
+	<script >
+	
+		angular.module("testModule",[]);
+		
+		//Camel convention for Directive name
+		//hello-greet
+		//can be used in 4 ways : Element <hello-greet>,Attribute <a hello-greet>,
+		//Class <a class="hello-greet">,Comment <!-- hello-greet -->
+		angular.module("testModule").directive("helloGreet",function(){
+			
+			return {
+				replace: false,
+				template: "<h1> Hello from {{isolatedScopemessage}} </h1> <input type='text' ng-model='isolatedScopemessage'/>",
+				restrict: "E", // E for Element,A for Attribute, M and C
+				scope: {isolatedScopemessage: "=messageAttr"},
+				link: function(scope,ele,attr){
+					
+					scope.$watch("isolatedScopemessage", function(newVal, oldVal, scope){
+						
+						console.log("isolatedScopemessage value : " + newVal + " " + oldVal);
+						
+					});
+				}
+			}
+		});
+	
+		angular.module("testModule").controller("testController", 
+				["$scope",function($scope){
+					
+					$scope.message = "hello from test controller"
+				}]);
+	</script>
+	
+	
+	
+</head>
+<body>
+	<div ng-controller="testController">
+		<input type="text" ng-model="message"/> 
+		<br/>
+		<output>{{message}}</output>
+		<hello-greet message-Attr="message"></hello-greet>
+	</div>
+</body>
+</html>

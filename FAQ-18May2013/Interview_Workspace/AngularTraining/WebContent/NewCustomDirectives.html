@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="testModule">
+<head>
+    <title></title>
+    <script src="lib/angular.min.js"></script>
+
+    <script>
+
+        angular.module("testModule", []).
+            directive("helloWorld", function () {
+
+                return {
+                    restrict: "E",
+                    template: "<h3>{{msg}}</h3> <br/> <input type='text' ng-model='msg'/> <br/> <input type='button' ng-click='OnMessageChanged()' value='ChangeMessage'/>",
+                    replace: false,
+                    scope: { msg: "=messageAttr" },
+                    link: function (scope,ele,attrs) {
+                        //Interact - Scope
+                        //Interact- Element (DOM Access)
+                        //register Watcher ( observer - Scope Properties)
+
+                        scope.OnMessageChanged = function () {
+
+                            console.log("Button Clicked");
+                            scope.msg = "New Message Value";
+                        };
+
+                        scope.$watch("msg", function (newVal, oldVal, scope) {
+
+                            console.log(newVal + " : " + oldVal);
+                        });
+
+                        ele.bind("mouseover", function () {
+
+                            ele.css("color","red");
+
+                        });
+                    }
+                  
+
+                };
+            });
+
+
+        angular.module("testModule").controller("testModuleController", ["$scope", function ($scope) {
+
+
+            $scope.Message = "Hello From TestModuleController";
+
+        }]);
+
+        angular.module('myApp', [])
+            .directive('helloWorld', function () {
+                return {
+                    restrict: 'AEC',
+                    replace: false,
+                    scope: { localMessage: "=messageAttr", parentFunction: "&parentShowMessageAttr" },
+                    template: "<h3>Hello, World! {{localMessage}}</h3> <br/> <input type='Button' value='Clear' ng-click='ClearMessage()'/>",
+
+                    link: function (scope, ele, attrs) {
+
+                        //scope.message = "Hello form Isolated Scope";
+                        scope.ClearMessage = function () {
+                            scope.localMessage = "";
+                            scope.parentFunction();
+                        };
+                        ele.bind("mouseover",
+                            function () {
+                                ele.css('cursor', 'pointer');
+                                ele.css('color', 'red');
+                            });
+                        scope.$watch("localMessage", function (newValue, oldValue) {
+
+                            console.log("oldValue:" + oldValue + " NewValue : " + newValue);
+                        });
+                    }
+                };
+            });
+
+        angular.module('myApp').controller("TestController", ['$scope', '$window',
+            function ($scope, $window) {
+                $scope.message = "Hello form TestController";
+                $scope.alertMessage = function () {
+                    $window.alert("Message Content Cleared from helloWorld Directive");
+                };
+
+            }
+        ]);
+
+
+    </script>
+</head>
+
+<!--<body ng-controller="TestController">
+    <input type="text" ng-model="message" />
+    <span>{{message}}</span>
+    <hello-world message-attr="message"
+                 parent-show-message-attr="alertMessage()"></hello-world>
+</body>-->
+
+<!--  scope={Message="Hello From TestModuleController"} -->
+<body ng-controller="testModuleController">
+    <input type="text" ng-model="Message" /><br />
+    <output>{{Message}}</output>
+    <hello-world message-attr="Message"></hello-world>
+</body>
+</html>

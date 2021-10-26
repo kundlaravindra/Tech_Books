@@ -1,0 +1,8 @@
+package paper1;
+
+public class Base {
+	public void method(int i){
+		System.out.println("value of i   "+i);
+	}
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+
+>
+
+<bean id="stage" class="com.core.general.Stage" factory-method="createStage">
+	
+</bean>
+
+<bean id="stageFactory" class="com.core.general.StageFactory" >
+	
+</bean>
+
+<bean id="stage1" factory-bean="stageFactory" factory-method="createStageInstance">
+	
+</bean>
+
+
+
+
+
+
+
+</beans>

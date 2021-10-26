@@ -1,0 +1,26 @@
+package paper2;
+class Test8{
+	/*Test8(int i){
+		System.out.println("in int");
+	}*/
+	Test8(){
+		
+	}
+}
+public class Test5 extends Test8{
+	/*Test5(String s){
+		//super(7);
+		System.out.println("in String");
+	}*/
+	Test5(){
+		
+	}
+	
+	public static void main(String[] args) {
+		Test8 t=new Test5();
+	
+		
+
+	}
+
+}

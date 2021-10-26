@@ -1,0 +1,19 @@
+package sample;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.SortedSet;
+
+public class DelelingDublicatObjects {
+	public static void main(String[] args) {
+		CollectionExp c=new CollectionExp(1,"Raja");
+		CollectionExp c1=new CollectionExp(1,"Raja");
+		List l=new ArrayList();
+		l.add(c);
+		l.add(c1);
+		Set s=new SortedSet() {
+		};
+
+	}
+
+}

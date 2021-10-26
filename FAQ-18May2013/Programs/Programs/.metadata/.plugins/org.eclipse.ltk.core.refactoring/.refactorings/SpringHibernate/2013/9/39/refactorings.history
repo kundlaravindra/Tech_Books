@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringHibernate/src/com/spring/hibernate/example/NewFile.xml&apos; to &apos;spring-config.xml&apos;" description="Rename resource &apos;NewFile.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/spring/hibernate/example/NewFile.xml" name="spring-config.xml" stamp="1379943081260" updateReferences="true"/>
+</session>

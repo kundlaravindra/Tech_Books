@@ -1,0 +1,7 @@
+package com.toshiba.inheritanc;
+
+abstract public class AbstractA {
+	
+	abstract public void run();
+
+}

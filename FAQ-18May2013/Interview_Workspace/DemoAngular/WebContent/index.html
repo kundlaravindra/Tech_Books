@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		
+		<script src="lib/angular.min.js"></script>
+		<!-- <script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+		<script src="lib/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
+		<script	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="MainController">
+		<!-- <div id="wrapper">
+			<ul id= "menu">
+				<li>X men </li>
+				<li> Defenders</li>
+			</ul>
+			<input type="text" id="name" placeholder="name">
+			
+		</div> -->
+	
+	
+		<div>
+			<h1>{{ message}}</h1>
+			{{data.entity}}
+			<p id="p_1">
+				Enter your Name :<input type="text" ng-model="txtName" />
+			</p>
+			<p>Hello {{ txtName }} ...</p>
+		</div>
+	
+		<script type="text/javascript">
+			 $("document").ready(function(){
+				/* alert("Sample Alert");
+				
+				
+				$("#p_1").css("color", "red"); */
+				
+				$("#menu").menu({
+					position : {
+						my: "center top",
+						at : "center bottom"
+							
+					}
+				});
+			}); 
+		
+		</script>
+	</body>
+</html>

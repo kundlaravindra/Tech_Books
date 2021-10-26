@@ -1,0 +1,25 @@
+package sample;
+
+public class ArraySorting {
+
+	public static void main(String[] args) {
+int n1[]={55,40,80,65,71};
+int n=n1.length;
+int i,j;
+for(i=0,j=1;j<=n;j++){
+	if(n1[i]<n1[j]){
+		int t=n1[i];
+		n1[i]=n1[j];
+		n1[j]=t;
+	}
+	
+	
+	if(j<=n){
+		i++;
+		j=i;
+		
+	}
+}
+	}
+
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="MainModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script>
+
+        angular.module("MainModule", ['ngRoute']).config(function ($routeProvider) {
+
+            $routeProvider.when("/Home", { templateUrl: "partialViews/Home.html",controller:"loginController" });
+            $routeProvider.when("/Projects", { templateUrl: "partialViews/Projects.html" });
+            $routeProvider.when("/Clients", { templateUrl: "partialViews/Clients.html" });
+            $routeProvider.when("/Contacts", { templateUrl: "partialViews/Contacts.html" });
+            $routeProvider.when("/AboutUs", { templateUrl: "partialViews/about.html" });
+            $routeProvider.when("/welcome", { templateUrl: "partialViews/welcome.html" });
+
+
+        }).controller("loginController", ["$scope",'$location',"$http", function ($scope,$location,$http) {
+
+            $scope.Validate = function () {
+
+                $http(
+                    {
+                        method: "get",
+                        url: "http://localhost:8082/ValidateLogin/" +
+                            $scope.Credentials.UserName + "/" + $scope.Credentials.Password
+                    }).success(function (data, status) {
+
+                        if(data=="valid")
+                        {
+                            $location.path("/welcome");
+                        }
+
+                    });
+                //AJAX Call - REST Service
+
+                //if ($scope.Credentials.UserName == "tom" && $scope.Credentials.Password == "tom")
+                //{
+                //    //Redirect - new View 
+                //    $location.path("/welcome");
+                //}
+            };
+
+        }]);
+    </script>
+    <title></title>
+</head>
+<body>
+    <div style="width:100%;height:50px;border-bottom-style:solid;">
+        <h3>SysTeleca Employee Portal</h3>
+    </div>
+    <nav style="clear:both;float:left;width:20%;height:500px;border-right-style:solid">
+
+        <a href="#/Home">Home</a><br />
+        <a href="#/Projects">Projects</a><br />
+        <a href="#/Clients">Clients</a><br />
+        <a href="#/Contacts">Contacts</a><br />
+        <a href="#/AboutUs">AboutUs</a><br />
+    </nav>
+    <div style="float: left;height: 500px;" ng-view></div>
+    <div style="clear:both;float:left;border-top-style:solid;text-align:center;width:100%;height:50px"></div>
+</body>
+</html>

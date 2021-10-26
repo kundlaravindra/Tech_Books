@@ -1,0 +1,25 @@
+package com.toshiba.jdbc;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class SQLSatement {
+	static Connection connection;
+	private ResultSet resultSet = null;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		connection = OracleJDBC.connectionObject();
+		try {
+			Statement statement = connection.createStatement();
+			System.out.println("Statement created");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

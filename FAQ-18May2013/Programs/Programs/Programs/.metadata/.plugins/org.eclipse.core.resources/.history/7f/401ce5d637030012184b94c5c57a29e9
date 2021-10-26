@@ -1,0 +1,11 @@
+package A;
+
+import src.A;
+
+
+public class AS {
+public static void main(String[] args) {
+	Class class1=Class.forName(A.class);
+	
+}
+}

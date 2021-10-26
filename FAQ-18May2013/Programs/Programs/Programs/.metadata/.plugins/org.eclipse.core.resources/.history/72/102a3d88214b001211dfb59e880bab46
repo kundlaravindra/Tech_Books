@@ -1,0 +1,23 @@
+package sample;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class DelelingDublicatObjects {
+	public static void main(String[] args) {
+		CollectionExp c=new CollectionExp(1,"Raja");
+		CollectionExp c1=new CollectionExp(2,"Raj");
+		List l=new ArrayList();
+		l.add(c);
+		l.add(c1);
+		Set s=new TreeSet<CollectionExp>(new CollectionExp());
+		s.add(c1);
+		s.add(c);
+		
+		
+
+	}
+
+}

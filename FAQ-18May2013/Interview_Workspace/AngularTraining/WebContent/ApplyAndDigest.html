@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <title></title>
+    <script src="lib/angular.min.js"></script>
+    <script>
+        angular.module("TestModule");
+        
+
+    </script>
+</head>
+<body>
+    <!-- 1. The directive ng-model registers a keydown listener with the input field. 
+            When the input field text changes a keydown event is fired and the 
+        corresponding
+            listener is called to handle it.
+         2. Inside the keydown listener the directive assigns the new value of input
+         field to the
+           scope model specified in ng-model.
+         In our case the model name is updated
+            with the new value. This code is wrapped inside $apply() call
+         3.After $apply() ends the digest cycle starts in which the watchers are called.
+         If you have an expression {{name}} in the view it has already set up a 
+        watcher on
+           scope model name. So, in digest cycle this watcher gets called and 
+        the listener function executes with the newValue and oldValue as arguments.
+         The job of this
+           listener is to update the DOM with the newValue probably using innerHTML
+         4. The overall result is that you see the {{name}} updated with 
+        whatever you type into the input field instantly
+        -->
+
+    <!-- $scope={name:value}-->
+    <input id="input" type="text" ng-model="name" />
+    <!-- One Way Binding -->
+    <div id="output">{{name}}</div>
+</body>
+</html>

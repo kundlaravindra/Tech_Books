@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="TestApp">
+<head>
+    <title></title>
+   <script src="lib/angular.min.js"></script>
+    <script>
+
+       /*  angular.module("TestApp", []).
+            provider("log", function () {
+                this.messageSize = 0;
+                this.setMessageSize = function (value) {
+                    this.messageSize = value;
+                };
+                this.$get = function () {
+                    var _messageSize = this.messageSize;
+                    return  {
+                        write: function (logMessage) {
+                            console.log(_messageSize + " : " + logMessage);
+                        }
+                    };
+                };
+            });
+
+        angular.module("TestApp").config(function (logProvider) {
+
+            logProvider.setMessageSize(10);
+
+        });
+
+        angular.module("TestApp").
+            controller("TestController",
+            ["log", function (log) {
+            
+                log.write("Hello from TestController");
+
+            }]); */
+
+         angular.module('myApp', []).
+           provider('greet',
+           function () {
+           this.greeting = 'Hello'; //we can configure this.The default is Hello.
+           this.$get = function () {
+               //this will be called to obtain greet Service
+               var greeting = this.greeting;
+               return function (name) {
+                   alert(greeting + ', ' + name);
+               }
+           }
+           this.setGreeting = function (greeting) { //setter for greeting text
+               this.greeting = greeting;
+           }
+        });
+
+        angular.module('myApp')
+           .config(function (greetProvider)
+           { //get the provider injected
+           greetProvider.setGreeting('Hola'); //configure our provider
+           });
+
+
+        angular.module('myApp').
+           controller('TestController',
+           function (greet) {
+           greet('Shastri'); //use the greet service
+        });
+    </script>
+</head>
+<body ng-controller="TestController">
+
+</body>
+</html>

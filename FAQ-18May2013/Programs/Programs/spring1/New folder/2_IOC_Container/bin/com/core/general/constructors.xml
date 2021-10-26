@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+
+>
+
+<bean id="box" class="com.core.general.Box">
+	<constructor-arg value="20" />
+	<constructor-arg value="20" />
+	<constructor-arg value="20" />
+
+</bean>
+
+<bean id="user" class="com.core.general.User">
+	<constructor-arg value="frank" />
+	<constructor-arg value="smith" />
+
+	
+
+</bean>
+<bean id="box1" class="com.core.general.Box">
+	<constructor-arg value="20" />
+	<constructor-arg value="20" />
+	<constructor-arg value="20" />
+	<constructor-arg ref="user" />
+
+</bean>
+
+
+
+
+</beans>

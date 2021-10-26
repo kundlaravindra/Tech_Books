@@ -1,0 +1,8 @@
+1379510719814	Delete element
+1379510759615	Rename resource 'APIDB.props'
+1379511678911	Rename resource 'DriverProp.props'
+1379514384356	Rename type 'CureOperation'
+1379514432084	Rename type 'SqlSatement'
+1379524686830	Encapsulate field 'name'
+1379524698399	Encapsulate field 'id'
+1379524706891	Encapsulate field 'course'

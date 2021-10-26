@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FlightDisplay/WebContent/YourFile.txt.txt&apos; to &apos;YourFile.txt&apos;" description="Rename resource &apos;YourFile.txt.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/YourFile.txt.txt" name="YourFile.txt" stamp="1346383759178" updateReferences="true"/>
+</session>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title></title>
+    <script src="lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', []).
+            controller('TimeoutController', function ($scope,$timeout) {
+                $scope.changeMessage=function(){$scope.message="Modified form Angular Context"};  
+                $scope.scheduleTask = function () {
+
+                    setTimeout(
+                        function () {
+                            //Scope.Message - updated outside the context of AngularJS
+                        $scope.message = 'Fetched after 3 seconds';
+                        console.log('message=' + $scope.message); //log this to console
+                    }, 3000);
+                };
+                $scope.newScheduleTask = function () {
+                    setTimeout(function () {
+
+                        $scope.$apply(function () {
+
+                            $scope.message = "Fetched after 3 seconds";
+                            console.log("message=" + $scope.message);
+
+                        });
+                    }, 3000);
+                };
+                $scope.noMoreScheduleTask=function(){
+                
+                    $timeout(function () {
+                        $scope.message = "Fetched after 3 seconds";
+                        console.log("message=" + $scope.message);
+                    }, 3000);
+                };
+
+            });
+
+          
+
+    </script>
+
+    
+</head>
+<body ng-controller="TimeoutController">
+    <button ng-click="changeMessage()">Change Message From Angular Context</button>
+    <button ng-click="newScheduleTask()"> Get Message after 3 seconds   </button>
+    <br />Message fetched: {{message}} <!-- socpe.$watch(message,function(){update UI}) -->
+    <output>{{message}}</output>
+    <output>{{message}}</output>
+    <output>{{message}}</output>
+    <output>{{message}}</output>
+    <output>{{message}}</output>
+</body>
+</html>

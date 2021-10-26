@@ -1,0 +1,18 @@
+package paper2;
+class Test{
+	Test(int i){
+		System.out.println("in int");
+	}
+}
+public class Test5 {
+	Test5(String s){
+		System.out.println("in String");
+	}
+	public static void main(String[] args) {
+		Test t=new Test5("test");
+	
+		
+
+	}
+
+}

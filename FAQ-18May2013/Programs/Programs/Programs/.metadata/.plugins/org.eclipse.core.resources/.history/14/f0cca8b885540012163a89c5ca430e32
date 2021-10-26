@@ -1,0 +1,58 @@
+package in.CookBook.collection;
+
+public class CollectionBean implements Comparable<CollectionBean> {
+
+private String id;
+private String name;
+
+public CollectionBean() {
+
+}
+
+public CollectionBean(String id, String name) {
+this.id = id;
+this.name = name;
+}
+
+public int compareTo(CollectionBean bean) {
+// TODO Auto-generated method stub
+if (!(bean instanceof CollectionBean)) {
+throw new ClassCastException(
+"Bean object is not a instance of CollecionBean");
+}
+return bean.getName().compareToIgnoreCase(this.name);
+}
+
+public boolean equals(CollectionBean bean) {
+System.out.println("idd--->" + bean.getId());
+return(this.getId().equals(bean.getId())
+&& this.getName().equalsIgnoreCase(bean.getName())) ;
+
+}
+
+public int hashCode(CollectionBean bean) {
+
+int temp = (31) * 1
++ (bean.getName() == null ? 0 : bean.getName().hashCode())
++ (bean.getId() == null ? 0 : bean.getId().hashCode());
+return temp;
+}
+
+public String getId() {
+return id;
+}
+
+public void setId(String id) {
+this.id = id;
+}
+
+public String getName() {
+return name;
+}
+
+public void setName(String name) {
+this.name = name;
+}
+
+}
+

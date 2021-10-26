@@ -1,0 +1,14 @@
+package Com.pavan;
+
+public class Marlabs3 {
+	
+	public static void main(String[] args) {
+		
+		
+		/*while(true?false:true){
+			System.out.println("hello");
+			
+		}*/
+	}
+
+}

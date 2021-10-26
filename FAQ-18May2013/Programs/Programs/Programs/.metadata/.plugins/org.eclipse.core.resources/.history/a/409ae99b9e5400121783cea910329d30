@@ -1,0 +1,22 @@
+package in.CookBook.collection;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class MyCount {
+	public static void main(String[] args) {
+List l=new ArrayList();
+l.add("y");
+l.add("n");
+l.add("y");
+l.add("y");
+l.add("n");
+Set s=new HashSet();
+s.addAll(l);
+
+
+	}
+
+}

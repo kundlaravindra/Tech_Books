@@ -1,0 +1,8 @@
+package sample;
+
+public class DelelingDublicatObjects {
+	public static void main(String[] args) {
+
+	}
+
+}

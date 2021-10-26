@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.toshuba.reflection&apos; to &apos;com.toshiba.reflection&apos;&#x0D;&#x0A;- Original project: &apos;ToshibaEx&apos;&#x0D;&#x0A;- Original element: &apos;ToshibaEx/src/com.toshuba.reflection&apos;&#x0D;&#x0A;- Renamed element: &apos;ToshibaEx/src/com.toshiba.reflection&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.toshuba.reflection&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.toshuba.reflection" name="com.toshiba.reflection" qualified="false" references="true" stamp="1378218186660" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,16 @@
+package com.toshiba.inheritanc;
+
+public class AbstractB extends AbstractA{
+	
+	synchronized public void run(){
+		System.out.println("hi");
+		
+	}
+	
+	public static void main(String[] args) {
+		AbstractB a = new AbstractB();
+		a.run();
+		
+	}
+
+}

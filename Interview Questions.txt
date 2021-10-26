@@ -1,0 +1,858 @@
+Interview Questions
+----------------------
+Q) Java 8 Features:
+	Predicate Interface:
+	Function Interface
+	Consumer Interface
+	Supplier Interface
+	Predicate Vs BiPredicate
+	Stream API
+Q) Familiarity with lambda exception?
+Q) New classes and interfaces in java.util.concurrent
+Q) Concurrency API
+3) Continuation of Concurrency: Callables and Futures
+Q) Why static methods in interface Java-8?
+Q) Why default methods in interface java 8?
+Q) Why static methods are not there in interfaces BEFORE Java-8?
+Q) How to convert a list of objects to a Map in Java 8 by handling duplicate keys?
+Q) How to check if list is empty in Java 8 using Optional, if not null iterate through the list and print the object?
+Q) How to convert a List of objects into a Map by considering duplicated keys and store them in sorted order?	
+Q) Garbage collection in java and when it is invoked?
+Q) Any buisness case for creating custom exception?
+Q) Java memory management?
+Q) How to resolve outofmemory error? 
+Q) What is stored in heap and what is stored in static memory?
+Q) Immutable Concepts // so many internal questions
+Q) Reasons for not using finalize()
+Q) WAP to find the odd numbered duplicate element in array where we have even numbered duplicates, 1 Odd numbered duplicate?
+Q) Annotations Implementation:
+Q) Why Java platform is Independent?
+Q) Why Java platform is Independent?
+Q) Diff between i++ or i+=1 
+Q) Difference between static loading vs. dynamic class loading?	
+Q) Write a program for Longest Subsequent value of given 2 Strings
+Q) Why String class is immutable in java?
+Q) Why is a constant defined as a static final in Java?	  
+Q) Why do member variables have default values whereas local variables don't have any default value ?	
+Q) What are stateless objects ? How are they different from immutable objects ? Which of these two is thread safe ?
+A)Stateless object is an instance of a class without instance fields (instance variables). The class may have fields, but they are compile-time constants (static final).
+
+A very much related term is immutable. Immutable objects may have state, but it does not change when a method is invoked (method invocations do not assign new values to fields). These objects are also thread-safe
+Q) What could be the reasons for restricting inheritance using final class ?
+Q) What are the uses of Abstraction ?	A: Loose Coupling, Facilitates designing complex applications by making them modular.
+Q) What is the primary benefit of Encapsulation?
+79) What is the difference between finalize() and dispose()?	
+Q) When a singleton object will become not singleton in Java? A singleton wouldn't work as a singleton if a given class is loaded by multiple class-loaders.
+Q) How can you determine if JVM is 32-bit or 64-bit from Java Program : System.getProperty("java-version"); OR from command prompt java -version
+Q) Can we create an immutable object that contains a mutable object?
+Q) How Java enabled High Performance?
+Q) List any five features of Java?
+Q) So what are the advantages of static blocks?
+Q) How to handle Exceptions in static blocks? 
+Q) Immutable class Rules:
+Q) How To access hidden or shadowed variable?.
+Q)What is Contract between public boolean equals(Object obj) and public int hashCode()?
+Q) What is classloader?
+Q) Diff between Composition and Aggrigation?
+Q) WAP for return the second highest number...
+Q) Type Erasure AND Raw TYPE:
+Q) Wildcards in Java:   Wildcard can be used in variety of situations such as type of a parameter/field/local variable;
+		Question mark (?) is known as wildcard in generic programming. It represents unknown type.
+		Upper Bounded Wildcards  : public static void add(List<? extends Number> list)        // It supports for all the child classes of Number
+		Lower Bounded Wildcards  : Collectiontype <? super A>                           			   // It supports for all the parent classes of class A
+		Unbounded Wildcard         :  private static void printlist(List<?> list)   					   // It will support for any list
+Q) Where is serialization used in real time? it is the performance issue. So how can we overcome this?  // Serialization is a recursive algorithm. 
+Q) If we observe there is memory issue then how can u resolve this issue?
+Q) What is Memory Leak in Java? 
+Q) How can one call one constructor from another constructor in a class? 	A:  Use the this() method to refer to constructors.
+Q) What is the purpose of intern() method in the String class? 	A:  It helps in moving the normal string objects to move to the String literal pool
+Q) What’s Numeric promotion? A: int & floating-point operations may happen. byte, char, short values r converted to int. int values r converted to long. long, float values r converted to double values
+Q) Why we need to use ENUM?
+Q) What will happen if an exception is thrown from the finally block?
+Q) Why Arraylist is preferred over linkedlist? Any business case for linkedlist? Yes, Arraylist is preferred. 
+Q) How hashmap works internally?
+Q) How to create a list of customer names from list of customer object?
+Q) What if duplicate keys are there while collecting to map in stream? how to handle the duplicate keys?*
+Q) Ways to sort list of elements?
+77) Disadvantages of Collections : 	  
+Q) CopyOnWriteArrayList
+Q) Number of ways to create thread?
+39) What will happen if we don’t override Thread class run() method? 
+40) Atomic operation:
+Q) LiveLock
+Q) Startvation
+96) ArrayList Vs CopyOnWriteArrayList:
+Q) Explain any multithreading usecase?
+49) Threads & Concurrency:
+82) Concurrency Issues-Solutions
+83) Thread pool, ThreadLocal, ThreadDump
+1) What is connection pooling?
+3) What is meant by "asynchronous event." Give some examples ?
+2) How Java provide high Performance ? 
+2)What will happen if non-static synchronized method calls a static synchronized method?
+3)What is the use of volatile in Java?
+Q) What is a deadlock in Java? How will you detect and get rid of deadlocks?
+Q) ReentrantLock usage:
+4)How can you make sure that your singleton class will always return single instance in multi-threaded environment?
+Q) Spring Transaction Management 
+12) If we want an embedded database (H2, HSQL or Derby)
+Q) How to return only particular columns from jpa (without use of typed-query or named-query)?
+7) Composite Primary Key implemenetation
+26) Difference b/w Hibernate & JPA?
+57) What are the ways to avoid LazyInitializationException?		
+58) How to configure second level cache in Hibernate ?
+Q) What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
+Q) What will happen if we don’t have no-args constructor in Entity bean?
+59) Annotations are used in Hibernate 
+60) What are the restrictions for the entity classes ?				
+61) Different types of Hibernate Instance States ?	
+9) What things you would care about to improve the performance of Application if its identified that its DB communication that needs to be improved ?
+6) Difference between first level and second level Cache in hibernate ?
+Q) Why is it better to use hibernate than JDBC for database interaction in various Java applications?
+Q) What are the different subsets of SQL?
+Q) What do you mean by DBMS? What are its different types?
+Q) What is the difference between CHAR and VARCHAR2 datatype in SQL?
+Q) What are Constraints?
+Q) What is the difference between DELETE and TRUNCATE statements?
+Q) What do you mean by data integrity? 
+Q) What is the difference between clustered and non clustered index in SQL?
+Q) Write a SQL query to display the current date?  In SQL, there is a built-in function called GetDate() which helps to return the current timestamp/date.
+Q) What is Normalization and what are the advantages of it? 
+Q) What do you mean by Denormalization?
+Q) What is ACID property in a database? 
+Q) What is a View?
+Q) What do you mean by “Trigger” in SQL?
+Q) What are STUFF and REPLACE function?
+Q) Can we handle/mannually set the limit for the number of requests?
+Q) How do i know how much time a method takes to execute  in Rest services?
+Q) How to handle if 2 or more requests came to a rest service at same time? (OR) What happens if restful resources are accessed by multiple clients?
+C)Securing RESTful Web Services Using Annotations
+Q) HATEOAS  : 201
+Q) Response Code Ranges
+Q) Consuming Rest Services
+71)  How to create stateful Rest Services ?		
+70)  How would you go about creating a get rest service if it requires multitude(multiple) of params or inputs ?
+27) Rest Architecural Principles: 
+69) If SOAP is more secure than Rest, Why many applications today use Rest ?	
+67)  In which cases using SOAP is preferred over REST ?			
+AL) How can we do the validation before going to call the Rest Services? 
+AK) How can we make sure that, if the Json object and java pojo is not having the sameName properties?  // JSON Mapper or DozerMapping
+H) How to improve the speed for searching a data in internet?
+17) What is the max limit of the @get(), and if we want to send more than that what we need to do?
+23) How can you create a rest-end-points?
+23) How can you create a rest-end-points?
+13) Rest-Exceptional Handling
+X) Uncaught Exception Handling
+V) @ControllerAdvice
+Q) Diff b/w Post and PostMapping? 
+Q) Converting XML to Java Object as below.
+
+
+1) Diff b/w Monolith & Microservices
+3) Principles of Microservices
+
+4) Benefits of Microservices
+5) What things affect what Spring Boot sets up?
+
+9)  Give an overview of Spring Cloud
+10) Types of microservices: Stateless, data centric, and aggregator
+
+12) Challenges with the microservices architecture
+13) MicroSerives Achitechure with ServiceRegistry(Eureka) Design Pattern:
+15) Identifying Microservices Boundary : 
+19) What is difference between Web service and Microservice?
+20) Why are Microservices better?
+21) How microservices are connecting from one to another?
+22) How can you find, whether the issue is from backend or frontEnd?
+89) Examples of Microservices Frameworks for Java-8
+21) Below are the principles which microservice architecture has been built....
+		Scalability
+		Resiliency
+		Availability
+		autonomous
+		Independent
+		Failure isolation
+		Auto-Provisioning
+		Decentralized governance
+		Continuous delivery through DevOps
+Q) Micro Services - Deployment patterns:		
+Q)	MicroSerives-Challenges 
+Q) RealTime Example with the design patterns:
+Q) Design Patterns used in Spring?
+Q)SOLID Principles
+Q) System design for Twitter
+Q) System design for watsapp
+Q) What is the performance effect of a large number of import statements which are not used? 
+Q) Give a scenario where hotspot will optimize your code?
+Q) ELK Stack:
+Q) What is a load balancer? Describe why load balancing is an important piece of many distributed systems.
+Q) How do components communicate in a distributed system? A: Components in a distributed system communicate via message passing.
+Q) What is a way that two components in a distributed system might pass messages? 
+Q) How do components communicate in a distributed system?
+Q) What is a way that two components in a distributed system might pass messages?
+Q) Describe one of the primary differences between parallel computing and distributed computing?
+Q)  Imagine you have a microservices architecture where one microservice is responsible for Users and a separate microservice is responsible for Wallets. These MSs use REST to communicate. 
+While working on a requirement, an engineer on your team recommends the use of transactions so that: 1) when a User is created, a corresponding Wallet must be created 2) if the creation of the Wallet fails, the creation of the User should be rolled back to prevent incomplete data. What is the main issue with this solution?
+Q) What are microservices in an application? How is an application built using microservices different than a monolithic application?
+
+Q) What is fault tolerance in the context of a distributed system?
+Q) How can data replication help improve the fault tolerance of a distributed system?
+Q) How can distributed computing help large software teams be productive or organized?
+Q) What exactly is a distributed system?
+Q) What are the characteristics of a distributed system?
+15. What are some examples of distributed systems used today?  A: Some examples include the Internet, intranets, and mobiling or ubiquitous computing.
+16. What are some disadvantages of distributed systems?
+19. What are so security mechanisms that are used in distributed computing?
+
+21. What is scalability?
+22. What are the different types of system models? A: Architecture model, fundamental model, interaction model, failure model, and security model.
+27. What are the main advantages of a distributed system?
+Q) Which design pattern are used in Microservices ?
+Q) What is Eureka in Spring Cloud ?
+Q) Problems Faced in your project
+Q) common problems project teams face
+Q) How To Manage Tech Teams Better:
+Q) as a lead, Dealing with a Difficult Team Member
+Q) How to Manage People Problems in Technical Teams
+Q) How can we improve Job Satisfaction?
+Q) How do you deal with conflict?  
+Q) What was your experience trying to solve a difficult problem with a team?  
+Q) Name a time when you were compromised with quality and how did you handle it. 
+Q) Where do you see yourself in 5 years?  
+Q) Tell me about a time when you dealt with change.  
+Q) Tell me about a decision you regret.  
+Q) Describe a time you had to make a risky decision  
+Q) Give an example where you led a peer team  
+Q) Describe a complex employee relations issue you’ve dealt with  
+Q) Describe a time when you had difficulties with a direct report  
+Q) Tell us about a time you saw greater efficiencies and implemented these as a result  
+Q) Describe a time where you had to provide ongoing coaching or corrective action  
+Q) Tell me about a time that you had to work in a team.  
+Q) Tell me, how do you generate business?  
+Q) Tell us about a time you went against company policy
+Q) How good of a team player are you?
+
+Q) When you are faced with a problem, what do you do?
+Q) Your manager wants to buy new software to help increase the team's productivity, and she asks for your recommendation. How do you respond?					
+Q) Why should we choose you?
+Q) Performance-tuning
+Q) Top 10 Java Performance Problems
+Q) What is Performance Testing?
+
+Q) Tools used for Performance Testing: 
+Q) What is JMeter? Elements of JMeter
+Q: What are types of cloud computing?
+
+Q: What is difference between restart and restage in Cloud Foundry (PCF)?
+Q: What is Organization, Spaces, and Domains?
+Q) What is need for Cloud?
+Q) What are the benefits of using cloud ?
+Q) What is Spring Cloud ?
+Q) What are the features of Spring Cloud?
+Q) What are benefits of using Spring Cloud?
+Q) Spring Cloud - Zull API GAteway 
+Q) Spring Cloud - Ribbon with Eureka
+- What are the advantages of using cloud computing?
+- Cloud Computing disadvantages:
+- 5 essential characteristics of cloud:
+- Best free cloud storage platforms:
+- Cloud Service Delivery Models:
+- Cloud Deployment Models: 
+- Java Cloud Development Tools
+Q) Characteristics of Cloud Computing
+Q) Advantages &  Disadvantages of Cloud Computing
+Q) What are the Security Risks of Cloud Computing
+Q) Cloud Computing Architecture
+Q) How does cloud computing work
+Q) Components of Cloud Computing Architecture
+
+
+
+
+
+Q)How can u handle the Rest security?
+Q)Java Locking in core java?
+Q)JDBC/Hibernate TransactionMgmt?
+A) ConcurancyId //Janardhan
+Q)Roles & Responsibilities of Current Project?
+Q)What are the modules you know in Spring
+Q)Which servers u are hands On?
+Q)What do u mean by OAuth?
+Q)Second Level Cache in Hibernate?
+Q)What happend if we replace @Component with @Service?
+Q)DIff b/w abstract class and interface?
+Q)HashMap & HashSet internal logics for put and get?
+Q)WAP for String Reverse?
+Q)WAP to count & print the duplicate Strings which are read from the File?
+Q)Unions & Joins in SQL?
+Q)Diff b/w BeanFactory and AbstractFactory?
+Q)What is the diff b/w HashMap & ConcurantHashMap?
+Q)What are the object class methods? Why thread methods are there in Object class?
+Q)Roles and reponsibilities on the current project?
+Q)Rest MethodTypes & Status codes?
+Q)How can we handle the RestExceptions and upto frontEnd?
+Q)How can you support your application for multiple contries(I18N)?
+Q)HashSet & HashMap internal logics for get & put?
+Q)Internal questions for overriding the equals & hashcode mehtods?
+Q)Few annotations like Qualifier?
+Q)Why do we need SpringBoot and what is the advantage of it?
+Q)What are the Java8 features, what is the purpuse of default method in interface?
+Q)Inderect and coding questions on stream API?
+Q)Indirect question for SpringBatch and how can we implement it?
+Q)How can manage the team?
+Q)What are the challanges you faced recently?
+Q)What you learnt newly in office?
+Q)Hibernate mappig indirect questions? (We have multiple emeployies with the same dept, how can we map them)
+Q)String immutability?
+Q)How the JVM knows while retriveing map whether the key is there in that or not?
+Q)*How can we say that the HashMap is faster?(HashMap only compare the object which we are going to get,but list checks for all the objects)
+Q)Jenkins process Flow?
+Q)Azile Methodology?
+Q)What is the diff best POST and PUT?
+Q)Why are you looking for JOB change? 
+Q) What are the challanges you have faced recently in your project?
+Q) How can you tune the performance in DB layer and Application side?
+Q) How can you deploy the code if you have 100VM?
+Q) In one thread we have evenNumbers, athoer one is giving oddNumbers how can you get Sequentially(12345....1920)? // wait(1000) in both;
+Q) In one thread we have evenNumbers, athoer one is giving oddNumbers how can you get 135..1719246..1820)?  // t1.join()
+Q) What are the things you are going to validate while doing the code review?
+Q) SpringBoot life cycle? With Restful webservices
+Q) How can you say that, my Singleton class giving only one object?
+Q) How can we control the serialization? 
+Q) Why do we need to go with microservices?
+Q) Design patters related questions on Singleton, Factory and AbstractFactory
+1)what will you do to make your class to handle all rest requests like get put delete insert etc....
+2)What are the main advantages and one disadvantage of restful webservice
+3)Tell me main diff between soap vs restful
+4)What exactly request mapping will do and how to make any input param as notnull and valid and other annotations used
+5)Spring mvc flow -- modelandview what exactly it will return
+6)what is bundelveiwresolveer and types of controller you have written
+7)how to make our beans as singelton 
+8)How you configure jdbcTemplate in your application 
+9)What is the difference between jdbctemplate and NamedParameterJdbcTemplate
+10)how you return single object using sample java application
+11)how you create immutable objects in java
+12)what is diff between hashmap and linkedhashmap and treemap and how hashing will happen
+13)diff between comparator and comparable interface
+14)tell about left outerjoin give an example 
+15)query to get count(item) per order in one table called order_item using functions
+What is the Composite Key
+Diff between union & union all
+@RequestMapping : method level-
+Multiple Conttrollers
+1) Diff between static and non-static inner classes?
+2) Diff between path and class path?
+3) Diff between get() and load() in Hibernate?
+4) How can we create a constant variable in Java?
+5) What are the final classes in java?
+1) What are the interfaces in Collection framework?
+2) Why String is an Immutable class, Justify?
+3) Diff between String and StringBuffer?
+4) Diff between StringBuilder and StringBuffer?
+5) Serialization and Marker interfaces explanation?
+6) Diff between Set and List?
+7) How can I sort the List<EMploy>?
+8) Diff between Comparator and Comparable interfaces, Which is better?
+9) What is final class and how can we create it?* : class is final with no setters for the properties in it and private properties.
+10)Is StringBuffer/Builder classes are final or not?* : Yes
+11)How to make a List<Employ> as Immutable?* : Collections.unmodifiableList(list),Collections.unmodifiableCollection(collection)
+12)Servlet Life Cycle?
+13)Jsp implicit objects?
+14)Dependecy Injection types, Which is better?
+15)Auto wiring types?
+16)Scopes for Spring applications?
+17)What are the methods there in Session?
+18)Diff between get() and load() in Hibernate? :
+19)what is a lazy loading, which is default for Hibernate?
+20)Hibernate object states?* : Transient State, Persistent State, Detached State
+21)How Hashset knows the dulicate value is already with in that object?
+How can you remove the duplicate values from the array.[1,2,3,54,25,2,5,2,5,25,1,2,2,2,6], Without using collections? : 2 for loops in main-for loop
+What is Spring Boot?
+What are the Design patterns you worked?
+What is Agile scrum?
+Who is Scrum Master?
+1) Diff between Mutable and Immutable class?
+2) How can we create an Immmutable class?
+3) What are the predefined Immutable classes?
+4) Internal logic for HashMap and HashSet?
+5) Indirect question for Comparator:*
+   I just want to sort the employ object based on Id/firstName/ lastName, How?
+6) Name some of the Struts Action class? 
+7) Spring Flow, DispatcherServlet functionality?
+8) Diff between IOC and Dependency Injection?
+9) What is the functionality of Dependency Injection?
+10)How many types of DI Spring will support?
+11)Explain about @Autowired
+12)Diff between @Autowired and configurations? 
+13)How can I integrate Spring with Hibernate?
+14)What are the configurations for Spring with Hibernate?
+15)Which is better either Spring with Hibernate or JDBC?
+14)What is @Controller?
+15)What are the Annotations we are using as part of Spring MVC?
+16)What is Component Scan?
+17)What is FrontControll Design pattern?
+18)Do you have any idea about Design patterns, What are those, Any real time implementation?
+19)Any idea about Spring Designs?* 
+20)What is a native query in Hibernate? :id
+21)Define about Named Query?
+22)Define about HQL Query?
+22)What are the advantages of Spring with Hibernate?
+23)Explain about Spring Transaction Management(With and Without Annotations)?
+24)Explain about Spring Exception Handler?
+25)How can we test the Restful webservices?
+26)How can we develop the Restful webservices?
+27)Which typo protocals Restful webserveis supports?
+28)What are the methods will be supported by Rest?
+29)How can we convert from java object XMl or JSON?
+1) What are the roles and responsbles of you?
+2) What knd of a person you are?
+3) Did you menter a team in your experience?
+4) What are the regular activities as a lead?
+5) What is the process you are following, Agile?
+6) What are the long and short term goals?
+1) Example of Hibernate Inheritance?
+2) Diff between Agrigation and Compression?
+3) How to handle the transactions for the below situation?
+4) If we are going to insert 1k records in DB,if any issue occur at any point of time then all the saved records should be removed
+1) What is a java facade/facade design pattern?
+2) How can we write Singleton desing pattern?
+3) Retrieve the emp details with last highest salary of 5?
+select * from emp where 4>= (select count( distrinct sal) from emp where emp.sal>sal))
+4) What is an Adapter Pattern?
+5) How can we write Junit testcases?
+1) Write a program to print 1--100, if the number is multiplier of 3 then instead of number print"FIZZ".
+ if the number is multiplier of 5 then instead of number print"BUZZ" and 
+ if the number is multiplier of both then instead of number print"FIZZBUZZ".
+2) WAP to find the second largest number in an array with out using sorting?
+if(i>first){
+ sec = first;
+ first = i;
+ }
+ else if(i>sec){
+   sec = i;
+ }
+ 
+3) Write a sql query to print dept_name and number of employee in each dept?
+4) WAP to retrun the emailIds from the given String?
+Ex: "this is sales.consultant@oracle.com naresh kodumoori test@chinni.com
+5)Q1: What is the O/P for below ?* A:3	
+try{
+		retrun 1;
+	} catch{
+		retrun 2;
+	} finally{
+		retrun 3;
+	}
+Q2: What is the O/P for below ?* A: Unreachable COde
+try{
+	return 1;
+ } catch(Exception e){
+	return 2;
+ } finally{
+	 return 3;
+ }
+return 4;
+
+Q3:Below is also works fine.
+try{
+	return;
+ } catch(Exception e){
+	return;
+ } finally{
+	sop("Bye");
+	 return;
+ } 
+1) what is compileTime & Runtime exception, explain about them?
+2) How can we iterate a map, With and without enterySet?
+3) Indirect questions for Comparable interface?
+4) How can we remove the value if(i==8) from the List?
+5) Explain about Decorator DesignPattern?
+6) What is a serialization, In which scenario we will go for it?
+7) What is the use of transient varible?
+8) What is the concept of Synchronization, explain about it?
+9) If we go for Synchronization, then it is the performance issue. So how can we overcome this?
+10)Runtime polymorphism indirect question?
+11)How can we create a user defined exception?
+12)How can we create a Immuatable class?
+13)How can we restrict the others to extends MyClass? * (Or) How can I make class as final(No child class)
+   Class MyClass
+   {
+	  private MyClass(){ }	
+   }
+14)How can I get the same object as duplicate?*
+	Emp e1 = new Emp();
+	Emp e2 = e1.clone(); // Answer, again continuos question is...
+Note: If we clone e1 to e2 and update the e2 then e1 will be updated.
+      How can we handle this situation? 
+Ans : Here we need to implement Serialization. 
+15)What will happen if we did not use throws and try-catch blocks with the code which throws exception?
+16)Can we directly call the notify() and notifyAll() without calling the wait() method? A: we will get  java.lang.IllegalMonitorStateException
+17)If we have 10 threads, and the method is Synchronized then it is performance issue. How can we overcome this?*
+18)SingleTon design pattern indirect question?
+19)Servlet life cycle?
+20)How can we implement MultiThreading in our Restful webservices?
+21)What is idomPotentiant?
+22)How can you deside which method we are going to expose as a Rest?
+23)What are the challanges you faced while implementing the Rest services?
+24)What about the Security for Rest services?
+25)Diff between Authorization and Authentication?
+26)How you are handling the exceptions for your Restful services?(400 or 500)
+27)What is the Enum, why we are using it?
+28)If I have implemented some logic in one module. So how can you utilize that?
+   And in addition to it some other business need to implement?*
+
+32)How the HashMap works while inserting the elements?
+33)If the HashSet object is having duplicate employ objects(Ex: emp_id) then how can we elemenate them?*
+A: Need to ovveride the equals() with that emp_id, hashcode() 
+34)For example there is a List<User> where 
+User{
+	ContactInfo{ 
+		Address{.... }
+	}
+}. Then how can we copy the list?* DeepCopying.
+
+35) Shallow Cloning(Call By Reff) & DeepClonning(NO CallBY) indirect questions?*
+Emp{
+	id
+	Dept{
+		deptName;
+	}
+}
+If Emp e1 = new Emp(1, new Dept("PSE"));
+Emp cloned = (Emp) e1.clone();
+And now, cloned.getDept().setDeptName("Lead");
+
+Q: System.out.println(cloned.getDept().getDeptName()); // O/P: Lead, Why? (Because of Shallow Cloning)
+How to overcome this? 
+ Emp cloned = (Emp)e1.clone();
+ cloned.setDept((Dept)cloned.getDept().clone());
+ cloned.getDept().setName("Lead"); // O/p: PSE, Becasue of DeepClonning.
+ 
+ Note: We want to modify the cloned object with out reflecting the first one(Shallow Cloning)?
+	A: Can be possible by the help of reference.
+	Emp e1= new Emp();
+	Emp e2 = e1;
+	// If we modify the values in e2, those will not be effected in e1. 
+36)How can we write the Junit test cases, What are the Annotations we have to use over there?
+37)JSP tags, Idea about the JavaScript?
+38)How you are mcoking the objects?* 
+1) How can we expose a Restful webservice?
+2) SingleTon Design pattern?
+3) Immutable class?
+4) Synchronization with example?
+5) Thread priorities and Time Slycing mechanism?
+6) Why finally block?
+7) What are the Java7 features?
+8) Why LinkedHashSet?*
+9) Diff between Set and List?
+10)How can we overcome the problem with the set?*
+11)Example for Comparable & Comparator interfaces?
+12)internal mechanism for Sorting whith Collections.sort(list)?
+13)Normal concepts in Exceptional handling?
+14)Do you have any idea about GSon/Jettison? 
+1) Diff between StringBuffer and SrtingBuilder?
+2) Diff between HashTable and HashMap?
+3) Internal mechanism for HashMap?*
+4) Diff between ArrayList and Vector?
+5) New features of Java8?
+6) How can we write Immutable class?
+7) Describe the diff types of design patterns?
+8) What is the project requirement?
+9) What are the roles and resp for the current project?
+10)How can we throw the user defined exceptions, And in which scenarios?
+11)How the data is storing in the HashSet or LinkedHashSet through the buckets? 
+1) How can we expose the restful webservices?
+2) How can we handle the xml and Json responses?
+3) How you are giving the security to the restful services?
+4) JaxbMarshelling indirect questions?
+5) Indirect question for Comparator and Comparable?
+6) If there is dev & QA environments, Then some of the functionality is not working with QA(which is working with Dev), 
+   Then how can you change/test the functionality with the QA environemnts?*
+A: By creating a new artifact wich is having the DEV and QA environment details and add that jar in our war.
+7) How can we throw the user defined exceptions, And in which scenarios....?  
+8) How can we map the Sessionfactory to our dao class? 
+9) Define the complete configuration for Spring with Hibernate and JDBC?
+10)What are the Spring scopes, explain them?
+11)What are the Resolvers are there in the Spring?* a: InternalResourceViewResolver, SimpleExceptionReslover, UrlBasedViewResolver 
+A:  XmlViewResolver, ResourceBundleViewResolver, BeanNameViewResolver, FreeMarkerViewResolver
+co/mmonMultipartresolver, standadedServletMultipartresolver, simpleMappingExceptionResolver
+12)What are the annotations are available as part of Spring MVC?
+13)How can you generate Stubs with respect to WSDL/XSD files?
+14)How can you handle the MST(Third Party) exceptions?
+15)What is @Autowired with an example?
+16)Explain about Spring MVC flow?
+17)How many types of Design patterns are there, Explain about them?
+18)What is the Root class for the Exceptions, In which scenario we are catching the Throwable?
+19)Why we are using factory-bean="root" factory-method="lookup"?
+20)What is loadOnStartup?* 
+A: load-on-startup can specify an (optional) integer value. If the value is 0 or greater, it indicates an order for servlets to be loaded, servlets with higher numbers get loaded after servlets with lower numbers. // LESS NUMBER UNNAVI FIRST LOAD AVUTHAI
+21)How can we call the StoredProcedure in Spring with Hibernate/JDBC?
+22)From where the jar file are loaded?().m2, If those are not available then?(Repository)
+   So where we have configured about these?
+23)What is a modules tag, and what is the use of it?
+24)Do we need to add the version in all the artifact, are any better way?
+25)*How can the spring applciation is loading the properties which are configured in .properties file?
+   (Indirect question for PropertyPlaceholderConfigurer)*   
+   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations"> <list>
+                <value>classpath:META-INF/spring/registry.dbQueries.properties</value>
+                <value>classpath:META-INF/registry-batchjobs.properties</value>
+                <value>file:${sdp.configuration.home}/environment.properties</value>
+            </list> </property> </bean>
+26)What are the methods of Restful services? 
+27)What are the rules you will follow while starting a project from the Scratch?
+28)How can you avoid the issues while implementing the code at developer END?
+29)How can I escape from finally block?* 
+1) Can we inherit the Constructor?
+2) What is a polymorphism?
+3) How can we provide the security to Rest calls?
+4) Can constructor will have final?* No
+5) What is an enum?
+6) Diff between java enum and C- enum?*
+A: In C++, an enumeration is just a set of named, integral constants. In Java, an enumeration is more like a named instance of a class. 
+You have the ability to customize the members available on the enumeration.
+Also, C++ will implicitly convert enum values to their integral equivalent, whereas the conversion must be explicit in Java.
+7) What is dependency Injection?
+8) Can we access non-static members in Static methods?
+9) What are the design patterns?
+10)What is HashMap, How can we keep the elements in it as the emp object as a Key?
+11)Indirect question on JaxbMarshaller?
+12)Why we go for Restful web services?
+13)Can we override a overloaded method?
+14)Any Idea about the hashCode()?
+15)How can we do the Form validations as part of SpringMVC applciations?*
+16)Is your Rest resources are POJOS (or) DB instances?*
+17)Are you following versioning for Rest services, If yes How?* A: In class level path we can mention.
+18)Searching mechansim with Rest services?*
+   i.e; How can we pass the Path/Query params to retrive the Objects based on them?
+19)If there are many input params then, How can you work on them?* A: We can pass the object(User) as input body for Post/Put. 
+1) There is a file which is having the Employ details. Our task is we need to get the employ details from the file and based on empName need to sort the objects.
+After sorting if there is any emailId is not valid then we need to set "empty" for it. So what are the classes we need create to execute this business?*
+2) Is there any predefined java classes are available to do the validations?* A: Patterns/Match
+3) Diff between Enumarator, Iterator and ListIterator?
+4) Have you implemented any design patterns as part of your project?
+5) Can we implement the methods and Constructors in Enum?*Yes
+A: public enum TestEnum {
+	TestEnum(){
+		int a = 10;
+	};
+	 private void display(){
+		System.out.println("I am in display... enum");
+	}
+	int b =100;
+}
+Note : But no use of writing the above, we cannot access these in other classes. 
+6) How the gc() will be worked?*
+A: To manually Request GC (not from System.gc()) :
+Go To : bin folder in JDK eg.-C:\Program Files\Java\jdk1.6.0_31\bin
+Open jconsole.exe and Connect to the desired local Process.
+Go To memory tab and click perform GC.
+(OR) 
+System.gc ();
+System.runFinalization ();
+
+Q14) How to enable/disable call of finalize() method of exit of the application?*
+Ans) Runtime.getRuntime().runFinalizersOnExit(boolean value) 
+7) Diff between calling the garbage collector through the JVM and US(developer: Runtime.getRuntime().gc())?*
+A: If we requested then there is no guarantee that those requests will be taken care of by JVM.
+8) What is the ApplicationContextAware annotation?**[http://www.java2blog.com/2012/08/spring-applicationcontext.html]
+A: implementing the interface on the Country bean is an alternative to making the Capital bean an inner bean in the xml. Because if I make the Capital bean an inner bean, then I don't have to implement ant interface. 
+public class Capital { String capitalName;  setters & getters;}
+public class Country implements ApplicationContextAware{  
+  String countryName ;   ApplicationContext applicationContext;   Capital capital;  setters & getters;
+  public String getCapitalName(String ckiapitalBeanName)  /
+ {  
+  capital=(Capital) applicationContext.getBean(capitalBeanName);  
+  String capitalName=capital.getCapitalName();  
+  return capitalName;  
+ }  
+}
+9) How can you provide the RestImpl Authentication?*
+10)How can you handle the "message body reader Exception" for Java class?*
+A: This can be happend at the time of consuming the restful services if we dont add the media_types. (AND)
+a)First of all, you need @XmlRootElement annotation for your object class/entity.
+b)You need to add dependency for jersey-json if you are missing.For your reference I added this dependency into my pom.xml.
+<dependency>
+    <groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-json</artifactId>
+    <version>1.17.1</version>
+</dependency>
+11)HATIOS?*
+12)Restriction Security Model?*
+13)How Jersy FW comes to our method to execute the business?*
+14)Generics? and Wild Characters?*
+15)Please let me know the answer for the below code snippet?*
+   public void perform(ArrayList<String> al){.....}
+   public void perform(ArrayList<Integer> a){.....}
+main{
+	Test t = new Test();
+	ArrayList<String> al = new ArrayList<String>();
+	al.add("Nari");
+	t.perform(al);
+}   
+Whether this code is exceuting or not? i.e; Is it possible to overload the perform() with ArrayList<>?
+A: Comiple Error. In the .class file whatever the Generics we have created those will be removed and we have only ArrayList as the method parameter. So C.E.
+16)How can we add the <Link> tags to Result object?*
+1) wap which will give yes/no by changing the String and at the end it will be Polyndrom?
+ex: Abbccca : Yes i.e{Ichina String lo charectes marchithe, adi Polyndrom avuthado ledho cheppali}
+Approach : if the given string's length is odd number, then one of the character is odd-numbered and remaining are even-numbered.
+                 And if the given string's length is even number, ....
+2) We are storing the data in HashTable instead of calling the DB always.
+   But after one month, if we observe there is memory issue then how can u resolve this issue?
+3) How to maintain a cache at service layer?
+4) What are the challenges you faced in your project?
+
+What are the roles of your current project?
+Why design patterns?
+Why do we need singleton desing pattern?
+In which situation we can go with static methods?
+Diff between Rest & SOAP?
+Why Rest, In which scenarios we will implement it?
+What is the diff between https & http?
+Why Rest calls are http only?
+If the rest call is stateless, then how it is having the information for the previous action in a site?
+Why header params are mandatory for SOAP and why not REST?
+What is meant for Thread Hank?
+So many internal questions for Serialization?
+1) Why hashCode()?, What is the contract between hashCode() & equals()?
+2) WAP to check whether given number is prime or not with very good coding quality?
+3) Spring- auto wiring concepts?
+4) Spring with Hibernate integration?
+5) WAP to check whether the given bracket String is Balancing bracket?
+6) Design Patterns like Singleton, Decorator?
+7) HashMap internal logic?
+8) Concurrent Collections?
+9) Collections deep questions?
+Q:If an arraylist contains duplicate objects and remove() method is invoked on the same object, will it remove the duplicates?
+ArrayList’s remove(Object) operation removes the first occurrence of the match found. It does not remove the duplicates.
+
+REST : Representational State Transfer
+SOAP : Simple Object Access Protocol
+WSDL : Web Services Description Language
+WADL : Web Application Description Language
+ 
+1) String s = "My Name is Naresh", WAP to get the o/p as Naresh is Name my
+2) How String content pool knows about the string which we are adding which is already there inside it?
+3) Need to update the result where pass=fail and fail=pass (In java it will be possible by entrySet)
+4) What is ConcurrentModificationException?
+
+Q) How do you fetch keys from a dynamic object?
+Eureka/zuul interview questions 
+Kafka[kafka control centers, convertor: json, stinrg ,filestream , jdbc covertors , kafka-rest-proxy]
+Thread priorities and Time Slycing mechanism?
+ Do you have any idea about GSon/Jettison? 
+java code tho, max salary unnna employ details how ?
+ How the data is storing in the HashSet or LinkedHashSet through the buckets?
+internal mechanism for Sorting whith Collections.sort(list)?
+How can we overcome the problem with the set?*
+How can we map the Sessionfactory to our dao class? 
+Define the complete configuration for Spring with Hibernate and JDBC?
+How spring resolvers are working internally ?
+find the min or max element in stack with in O(1) 
+Reverse of words in a string
+finding the loop in linkedlist
+Write a simple program to verify if given string is palindrome
+Write a program to find all combinations of given string
+Distributed Cache implementation approach 
+Multiple Consumers and multiple producers implementation approach
+ReentrantLock usage
+implement merge sort and explain with time complexity  
+high level class diagram for book myshow
+Sort an array without using any inbuilt methods?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						
+				
+		 	
+						
+						
+						
+						

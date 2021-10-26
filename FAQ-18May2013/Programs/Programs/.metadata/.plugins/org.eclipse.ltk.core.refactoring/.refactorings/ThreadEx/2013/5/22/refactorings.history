@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;ToshibaEx/src/com.toshiba.thread&apos;&#x0D;&#x0A;- Original project: &apos;ThreadEx&apos;&#x0D;&#x0A;- Destination element: &apos;ToshibaEx/src/com.toshiba.thread&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     sample.HerThread.java&#x0D;&#x0A;     sample.YourThread.java&#x0D;&#x0A;     sample.InternetBankingSystem.java&#x0D;&#x0A;     sample.MyThread.java&#x0D;&#x0A;     sample.Account.java" description="Copy compilation units" destination="=ToshibaEx/src&lt;com.toshiba.thread" element1="/&lt;sample{HerThread.java" element2="/&lt;sample{YourThread.java" element3="/&lt;sample{InternetBankingSystem.java" element4="/&lt;sample{MyThread.java" element5="/&lt;sample{Account.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1369802185614" units="5" version="1.0"/>
+</session>

@@ -1,0 +1,24 @@
+package com.core;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+ 
+public class Command extends Thread implements Runnable{
+	static Command c;
+	public static void main(String[] args) throws Exception{
+		c=new Command();
+		c.sub();
+	 
+	}
+	public void sum() throws Exception{
+		System.out.println("I will be");
+	}
+	public static void sub() throws Exception{
+		c=new Command();
+		c.sub();
+		c.sum();
+		c.sum();
+		
+	}
+
+}

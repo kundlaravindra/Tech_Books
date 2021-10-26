@@ -1,0 +1,57 @@
+package paper1;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class VectorEx {
+	public void test(){
+		Vector v=new Vector(5,10);
+		//ArrayList v=new ArrayList();
+		v.add("1");
+		v.add("1");
+		v.add("1");
+		v.add("1");
+		v.add("1");
+		v.add("1");
+		
+		/*v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		v.addElement("2");
+		v.addElement("1");
+		//v.addElement("2");
+		//change(v);*/
+		//System.out.println(v.c);
+		
+	}
+	public void change(Vector v){
+		v.addElement("3");
+		
+	}
+	public static void main(String[] args) {
+		VectorEx a=new VectorEx();
+		a.test();
+		
+	}
+
+}

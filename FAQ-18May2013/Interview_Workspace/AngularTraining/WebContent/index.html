@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="CalculatorModule">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<script src="lib/angular.min.js"></script>
+		<script>
+		
+		//Angular Module
+		
+		angular.module("CalculatorModule",[]).
+			controller("calculatorController",['$scope',function($scope){ 
+				
+				/* $scope.operand1=0;
+				$scope.operand2=0;
+				$scope.result=0; */
+				$scope.add=function(){ $scope.result = parseInt($scope.operand1) + parseInt($scope.operand2) };
+				$scope.sub=function(){ $scope.result = parseInt($scope.operand1) - parseInt($scope.operand2) };
+				$scope.mul=function(){ $scope.result = parseInt($scope.operand1) * parseInt($scope.operand2) };
+				$scope.div=function(){ $scope.result = parseInt($scope.operand1) / parseInt($scope.operand2) };
+				
+			}]); //Lazy Loading
+		
+		</script>
+	</head>
+	<body >
+		<!-- Scope object is created -->
+		<fieldset ng-controller="calculatorController">
+			<legend>Calculator</legend>
+				<table>
+					<tr>
+						<td>Operand1</td>
+						<td><input type="text" ng-model="operand1"/></td>
+					</tr>
+					<tr>
+						<td>Operand2</td>
+						<td><input type="text" ng-model="operand2"/></td>
+					</tr>
+					<tr>
+						<td>Result</td>
+						<td><output>{{ result }}</output></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Add"  ng-click="add()" /> </td>
+						<td><input type="button" value="Sub" ng-click="sub()"/> </td>
+						<td><input type="button" value="Mul" ng-click="mul()"/> </td>
+						<td><input type="button" value="Div" ng-click="div()"/> </td>
+					</tr>
+				</table>
+		</fieldset>
+	</body>
+</html>

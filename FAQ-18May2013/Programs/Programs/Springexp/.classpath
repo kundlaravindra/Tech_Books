@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_AOP"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_JDBC"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_EM"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_CORE"/>
+	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/10.2.0/server/jdbc/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/hibernate3.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/hibernate-tools.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.aop-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.asm-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.aspects-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.beans-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.context.support-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.context-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.core-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.expression-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.instrument.tomcat-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.instrument-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.jdbc-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.jms-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.orm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.orm-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.oxm-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.test-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.transaction-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.web.portlet-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.web.servlet-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.web.struts-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Programs/Jars/jars/org.springframework.web-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

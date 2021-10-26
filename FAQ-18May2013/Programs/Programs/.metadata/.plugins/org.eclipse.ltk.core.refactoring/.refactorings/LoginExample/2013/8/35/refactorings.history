@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;Com.Candidjava&apos; to &apos;StrutsLogin/src&apos;&#x0D;&#x0A;- Original project: &apos;LoginExample&apos;&#x0D;&#x0A;- Destination element: &apos;StrutsLogin/src&apos;&#x0D;&#x0A;- Original element: &apos;LoginExample/src/Com.Candidjava&apos;" description="Copy package" destination="=StrutsLogin/src" element1="/src&lt;Com.Candidjava" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1377500423301" version="1.0"/>
+</session>

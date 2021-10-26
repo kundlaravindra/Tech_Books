@@ -1,0 +1,23 @@
+package paper1;
+class A{
+	public int add(int a,int b){
+		return a+b;
+	}
+}
+
+public class B {
+	public int add(int a,int b){
+		return (a+b)*2;
+	}
+	public int subtract(int a,int b){
+		return a-b;
+	}
+
+	
+	public static void main(String[] args) {
+		A a=new B();
+		
+
+	}
+
+}

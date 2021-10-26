@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="LoginModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+	<script src="lib/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.js"></script>
+		<script >
+		
+			angular.module("LoginModule",[]).
+				controller("accountsController",['$scope','$rootScope','$http',function($scope,$rootScope,$http){ 
+								
+								/* $scope.username=0;
+								$scope.password=0;
+								$scope.status=0;  */
+								
+							  	/* $scope.signIn = new Credentials($scope.username,$scope.password)
+								function Credentials(username,password){
+									if(username=="Deepak" && password=="password"){
+										$scope.status="Valid";
+									}	else{
+										$scope.status ="InValid"
+									}
+								};  */
+								
+								$scope.status="InValid";
+								 $scope.signIn = function() {
+									/* if($scope.Credentials.username=="Deepak" && $scope.Credentials.password=="password"){
+										$scope.status="Valid";
+									}	else{
+										$scope.status ="InValid"
+									} */
+									
+									//AJAX
+									$http({method:"GET",
+									url: "http://localhost:8082/ValidateLogin/"+$scope.Credentials.username + "/"+$scope.Credentials.password
+									})
+									.success(function(data,status){ $scope.status = data;})
+									.error(function(e,status){ $scope.status=e})
+									
+									
+									$rootScope.loginStatus=$scope.status;
+									//$rootScope.$broadcast("OnLoginStatusChanged");
+									amplify.publish("OnLoginStatusChanged", $scope.status);
+								}; 
+							}]).
+						controller("statusController",['$scope','$rootScope',function($scope,$rootScope){
+							$scope.statusMessage="UnKnown";
+							amplify.subscribe("OnLoginStatusChanged", function(message){
+								$scope.statusMessage = message;
+							});
+							
+							$scope.$on("OnLoginStatusChanged", function(evt,args){
+								$scope.statusMessage = $scope.loginStatus;
+							});
+						}]); 
+		</script>
+		
+
+</head>
+<body>
+	
+	<!-- Scope object is created -->
+		<fieldset ng-controller="accountsController">
+			<legend>Login View</legend>
+				<table>
+					<tr>
+						<td>UserName</td>
+						<td><input type="text" ng-model="Credentials.username"/></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" ng-model="Credentials.password"/></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Login"  ng-click="signIn()" /> </td>
+						<td><input type="Reset" value="Clear" /> </td>
+					</tr>
+					<tr>
+						<td>Status</td>
+						<td><output>{{ status }}</output></td>
+					</tr>
+				</table>
+		</fieldset>
+		
+		<fieldset ng-controller="statusController">
+			<legend>Login Status</legend>
+			<p> LoginStatus : <output> {{ statusMessage }}</output></p>
+		</fieldset>
+</body>
+</html>

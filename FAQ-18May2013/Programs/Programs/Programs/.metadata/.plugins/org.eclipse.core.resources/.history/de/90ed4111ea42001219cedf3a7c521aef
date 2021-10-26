@@ -1,0 +1,45 @@
+package sample;
+
+public class ThreadExample implements Runnable {
+	
+	
+	public void readFile(){
+		System.out.println("i am in read file");
+	}
+public void secondFile(){
+	System.out.println("i am in second file");
+}
+public void compareFile(){
+	System.out.println("i am in comparefile");
+}
+public void run(){
+	if (t1.getPriority()==9) {
+		t1.readFile();
+		
+	}
+	else if(t2.getPriority()==8){
+		t2.secondFile();
+		
+	}
+	else if(t3.getPriority()==6){
+		t3.compareFile();
+	}
+	else{
+		System.out.println("No thread executed..");
+	}
+}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ThreadExample threadExample=new ThreadExample();
+		Thread t1 =new Thread(threadExample);
+		t1.setPriority(9);
+		Thread t2= new Thread(threadExample);
+		t2.setPriority(8);
+		Thread t3 = new Thread(threadExample);
+
+	}
+
+}

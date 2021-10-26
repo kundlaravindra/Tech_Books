@@ -1,0 +1,13 @@
+package in.CookBook.collection;
+
+public class MyCount {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

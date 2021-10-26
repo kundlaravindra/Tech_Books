@@ -1,0 +1,45 @@
+package com.core.general;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Demo {
+	public static void main(String args[])
+	{
+		
+		//AbstractApplicationContext context =  new ClassPathXmlApplicationContext("com.core.general/constructors.xml");
+		ApplicationContext context =  new ClassPathXmlApplicationContext("com.core.general/constructors.xml");
+		
+		//context.registerShutdownHook();
+		BeanPostProcessorExample bean = (BeanPostProcessorExample)context.getBean("contextAware");
+		
+		bean.postProcessAfterInitialization();
+		
+		Box b = (Box)context.getBean("box");
+		
+		//System.out.println(bean.getBeanName());
+	
+		
+		
+		//LifeCycle  bean = (LifeCycle)context.getBean("life");
+	
+		//System.out.println(bean.breadth+bean.length+bean.height);
+		
+		//LifeCycle1  b = (LifeCycle1)context.getBean("life1");
+		
+		//ApplicationContextAwareExample  example = (ApplicationContextAwareExample)context.getBean("contextAware");
+		//example.showBeans();
+		//BeanNameAwareExample  example = (BeanNameAwareExample)context.getBean("nameAware");
+		//System.out.println(example.getBeanName());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

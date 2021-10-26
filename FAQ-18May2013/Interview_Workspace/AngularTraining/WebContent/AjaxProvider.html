@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="TestModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="lib/angular.min.js"></script>
+    <script>
+    
+		 angular.module('angularAjax', []).
+		    provider('ajax',
+		    function () {
+		    	
+		    	var self=this;
+		    	this.proxysetting = { userName:"", password:"" };
+		    /* 	this.userName='';
+		    	this.password=''; */
+		    	this.isCorsEnabled=false;
+		    	this.requestTimeOut=10;
+		    	this.dataType="json";
+		    	
+		    	/* this.setUserName = function (value) {
+	                    this.userName = value;
+	            };
+                this.setPassword = function (value) {
+                    this.password = value;
+                };
+	    	 */
+                /* this.setIsCorsEnabled = function (value) {
+		    		if(value == 'true'){
+		    			this.isCorsEnabled = value;
+		    		}else if(value == 'false'){
+                    	this.userName = value;
+		    		}
+            	};
+            	
+            	this.setRequestTimeOut = function(value){
+            		this.requestTimeOut=value;
+            	} */
+		    this.$get = function () {
+		        return{ 
+						getAjax: function () {
+			            console.log("GET invoked..." + self.proxysetting.userName + " " + self.proxysetting.password);
+			       	 	},
+		        
+				        postAjax: function () {
+				        	console.log("POST invoked..." + self.isCorsEnabled + " " + self.proxysetting.password);
+				        },
+				        putAjax: function () {
+				        	console.log("PUT invoked..." + self.requestTimeOut + " " + self.proxysetting.password);
+				        },
+				        deleteAjax: function () {
+				        	console.log("DELETE invoked..." + self.dataType + " " + self.proxysetting.password);
+				        }
+		    	};
+		    };
+		 });
+		 
+	angular.module('TestModule',['angularAjax']);
+	
+	angular.module('TestModule')
+         .config(function (ajaxProvider)
+         { //get the provider injected
+        	/*  ajaxProvider.setUserName("admin");
+        	 ajaxProvider.setPassword("admin");	 */
+        	 ajaxProvider.proxysetting.userName="Tom";
+        	 ajaxProvider.proxysetting.password="Tom"
+        	 ajaxProvider.isCorsEnabled = true;	
+        	 ajaxProvider.requestTimeOut = 20;	
+        	 ajaxProvider.dataType = "xml";	
+         });
+	
+	
+	
+	angular.module('TestModule').
+		controller('testController',
+				['ajax','$scope',function(ajax,$scope){
+			
+					$scope.Select = function(){
+						ajax.getAjax();			
+					};
+					$scope.Create = function(){
+						ajax.postAjax();		
+					};
+					$scope.Update = function(){
+						ajax.putAjax();			
+					};
+					$scope.Delete = function(){
+						ajax.deleteAjax();		
+					};
+			
+			
+			
+		
+	}] );
+    </script>
+</head>
+<body ng-controller="testController">
+
+	<input type="button" value="Create" ng-click="Create()"/>
+	<input type="button" value="Select" ng-click="Select()"/>
+	<input type="button" value="Update" ng-click="Update()"/>
+	<input type="button" value="Delete" ng-click="Delete()"/>
+	
+</body>
+</html>

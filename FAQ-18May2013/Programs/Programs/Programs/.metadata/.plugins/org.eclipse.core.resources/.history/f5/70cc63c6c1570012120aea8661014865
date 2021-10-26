@@ -1,0 +1,5 @@
+package paper1;
+
+public abstract class A {
+
+}
