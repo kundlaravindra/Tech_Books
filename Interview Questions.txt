@@ -1,12 +1,12 @@
 Interview Questions
 ----------------------
 Q) Java 8 Features:
-	Predicate Interface:
-	Function Interface
-	Consumer Interface
-	Supplier Interface
-	Predicate Vs BiPredicate
-	Stream API
+Predicate Interface:
+Function Interface
+Consumer Interface
+Supplier Interface
+Predicate Vs BiPredicate
+Stream API
 Q) Familiarity with lambda exception?
 Q) New classes and interfaces in java.util.concurrent
 Q) Concurrency API
@@ -27,7 +27,7 @@ Q) Reasons for not using finalize()
 Q) WAP to find the odd numbered duplicate element in array where we have even numbered duplicates, 1 Odd numbered duplicate?
 Q) Annotations Implementation:
 Q) Why Java platform is Independent?
-Q) Why Java platform is Independent?
+	Platform Independent - Unlike many other programming languages including C and C++, when Java is compiled, it is not compiled into platform specific machine, rather into platform independent byte code. This byte code is distributed over the web and interpreted by the Virtual Machine (JVM) on whichever platform it is being run on.
 Q) Diff between i++ or i+=1 
 Q) Difference between static loading vs. dynamic class loading?	
 Q) Write a program for Longest Subsequent value of given 2 Strings
@@ -146,14 +146,29 @@ X) Uncaught Exception Handling
 V) @ControllerAdvice
 Q) Diff b/w Post and PostMapping? 
 Q) Converting XML to Java Object as below.
-
-
 1) Diff b/w Monolith & Microservices
 3) Principles of Microservices
 
 4) Benefits of Microservices
 5) What things affect what Spring Boot sets up?
+6) Why it is necessary to extend`SpringBootServletInitializer` while deploying it to an external tomcat ?
+	Older Servlet containers don’t have support for the ServletContextInitializer bootstrap process used in Servlet 3.0. You can still use Spring and Spring Boot in these containers but you are going to need to add a web.xml to your application and configure it to load an ApplicationContext via a DispatcherServlet.
 
+	Inorder to create deployable war file is to provide a SpringBootServletInitializer subclass and override its configure method. This makes use of Spring Framework’s Servlet 3.0 support and allows you to configure your application when it’s launched by the servlet container. Typically, you update your application’s main class to extend SpringBootServletInitializer.
+
+	@SpringBootApplication
+	public class Application extends SpringBootServletInitializer {
+	@Override
+		protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+			return application.sources(Application.class);
+		}
+
+		public static void main(String[] args) {
+			SpringApplication.run(Application.class, args);
+		}
+	}
+	https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html
+	
 9)  Give an overview of Spring Cloud
 10) Types of microservices: Stateless, data centric, and aggregator
 
@@ -759,6 +774,14 @@ ReentrantLock usage
 implement merge sort and explain with time complexity  
 high level class diagram for book myshow
 Sort an array without using any inbuilt methods?
+what is the service mesh and when to use service mesh? (common things(cross cutting edges) to make seperate new service)
+Suppose 1 out of n number of microservices is failing or performaing slow or not responding. so how to manage that ?
+circuit breaker
+microservice vs micro frontEnd
+consistent hashing
+How do microservice benefit over multi module architecture having one springboot application file
+designing data-intesive applciations book
+
 
 
 
